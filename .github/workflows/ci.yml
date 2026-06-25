@@ -50,6 +50,7 @@ jobs:
           python -m pytest tests/
           --cov=.
           --cov-report=xml
+          --cov-config=.coveragerc
           --ignore=tests/test_frontend_smoke.py
           -q
       - uses: actions/upload-artifact@v4
