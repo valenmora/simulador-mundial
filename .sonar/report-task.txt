@@ -1,0 +1,6 @@
+projectKey=simulador-mundial
+serverUrl=http://localhost:9000
+serverVersion=26.6.0.123539
+dashboardUrl=http://localhost:9000/dashboard?id=simulador-mundial
+ceTaskId=7e9ca2af-bd6b-4260-8115-0b1df8242ffa
+ceTaskUrl=http://localhost:9000/api/ce/task?id=7e9ca2af-bd6b-4260-8115-0b1df8242ffa

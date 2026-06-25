@@ -1,0 +1,122 @@
+name: Simulador Mundial 2026 CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+
+  # ─────────────────────────────────────────────
+  # JOB 1 — Lint Ruff
+  # ─────────────────────────────────────────────
+  lint:
+    name: "\U0001F9F9 Lint Ruff"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install ruff
+      - run: ruff check .
+
+  # ─────────────────────────────────────────────
+  # JOB 2 — Tests + Coverage
+  # ─────────────────────────────────────────────
+  tests:
+    name: "\U0001F9EA Tests + Coverage"
+    needs: lint
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: "sqlite:///:memory:"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: >
+          python -m pytest tests/
+          --cov=.
+          --cov-report=xml
+          --ignore=tests/test_frontend_smoke.py
+          -q
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage.xml
+
+  # ─────────────────────────────────────────────
+  # JOB 3 — Quality Gate >= 80%
+  # ─────────────────────────────────────────────
+  quality-gate:
+    name: "\U0001F50D Quality Gate >= 80%"
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: coverage-report
+      - name: Parse coverage.xml and validate
+        shell: python
+        run: |
+          import xml.etree.ElementTree as ET
+          t = ET.parse("coverage.xml")
+          r = t.getroot()
+          lr = float(r.attrib["line-rate"])
+          pct = lr * 100
+          print(f"Coverage: {pct:.2f}%")
+          if lr < 0.80:
+              print(f"Quality Gate FAIL: coverage {pct:.2f}% < 80%")
+              exit(1)
+          else:
+              print(f"Quality Gate PASS: coverage {pct:.2f}% >= 80%")
+
+  # ─────────────────────────────────────────────
+  # JOB 4 — Simular Mundial 2026
+  # ─────────────────────────────────────────────
+  simulate:
+    name: "\U0001F3C6 Simular Mundial 2026"
+    needs: quality-gate
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: "sqlite:///:memory:"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python seed_and_simulate.py
+      - name: Validate dist/index.html
+        run: test -f dist/index.html && echo "dist/index.html exists" || (echo "dist/index.html not found" && exit 1)
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
+
+  # ─────────────────────────────────────────────
+  # JOB 5 — Deploy GitHub Pages
+  # ─────────────────────────────────────────────
+  deploy:
+    name: "\U0001F680 Deploy GitHub Pages"
+    needs: simulate
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

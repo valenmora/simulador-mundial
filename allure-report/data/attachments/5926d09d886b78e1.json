@@ -1,0 +1,771 @@
+{
+  "groups": [
+    {
+      "group": "A",
+      "standings": [
+        {
+          "team": "Pais 1",
+          "pts": 6,
+          "gf": 10,
+          "ga": 5,
+          "gd": 5,
+          "position": 1
+        },
+        {
+          "team": "Pais 10",
+          "pts": 6,
+          "gf": 7,
+          "ga": 5,
+          "gd": 2,
+          "position": 2
+        },
+        {
+          "team": "Pais 12",
+          "pts": 6,
+          "gf": 8,
+          "ga": 7,
+          "gd": 1,
+          "position": 3
+        },
+        {
+          "team": "Pais 11",
+          "pts": 0,
+          "gf": 1,
+          "ga": 9,
+          "gd": -8,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Pais 1",
+          "away_team": "Pais 10",
+          "home_goals": 3,
+          "away_goals": 0,
+          "winner": "Pais 1"
+        },
+        {
+          "home_team": "Pais 1",
+          "away_team": "Pais 11",
+          "home_goals": 5,
+          "away_goals": 0,
+          "winner": "Pais 1"
+        },
+        {
+          "home_team": "Pais 1",
+          "away_team": "Pais 12",
+          "home_goals": 2,
+          "away_goals": 5,
+          "winner": "Pais 12"
+        },
+        {
+          "home_team": "Pais 10",
+          "away_team": "Pais 11",
+          "home_goals": 2,
+          "away_goals": 1,
+          "winner": "Pais 10"
+        },
+        {
+          "home_team": "Pais 10",
+          "away_team": "Pais 12",
+          "home_goals": 5,
+          "away_goals": 1,
+          "winner": "Pais 10"
+        },
+        {
+          "home_team": "Pais 11",
+          "away_team": "Pais 12",
+          "home_goals": 0,
+          "away_goals": 2,
+          "winner": "Pais 12"
+        }
+      ]
+    },
+    {
+      "group": "B",
+      "standings": [
+        {
+          "team": "Pais 13",
+          "pts": 6,
+          "gf": 7,
+          "ga": 3,
+          "gd": 4,
+          "position": 1
+        },
+        {
+          "team": "Pais 14",
+          "pts": 4,
+          "gf": 6,
+          "ga": 4,
+          "gd": 2,
+          "position": 2
+        },
+        {
+          "team": "Pais 15",
+          "pts": 4,
+          "gf": 4,
+          "ga": 6,
+          "gd": -2,
+          "position": 3
+        },
+        {
+          "team": "Pais 16",
+          "pts": 3,
+          "gf": 7,
+          "ga": 11,
+          "gd": -4,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Pais 13",
+          "away_team": "Pais 14",
+          "home_goals": 0,
+          "away_goals": 3,
+          "winner": "Pais 14"
+        },
+        {
+          "home_team": "Pais 13",
+          "away_team": "Pais 15",
+          "home_goals": 3,
+          "away_goals": 0,
+          "winner": "Pais 13"
+        },
+        {
+          "home_team": "Pais 13",
+          "away_team": "Pais 16",
+          "home_goals": 4,
+          "away_goals": 0,
+          "winner": "Pais 13"
+        },
+        {
+          "home_team": "Pais 14",
+          "away_team": "Pais 15",
+          "home_goals": 0,
+          "away_goals": 0,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 14",
+          "away_team": "Pais 16",
+          "home_goals": 3,
+          "away_goals": 4,
+          "winner": "Pais 16"
+        },
+        {
+          "home_team": "Pais 15",
+          "away_team": "Pais 16",
+          "home_goals": 4,
+          "away_goals": 3,
+          "winner": "Pais 15"
+        }
+      ]
+    },
+    {
+      "group": "C",
+      "standings": [
+        {
+          "team": "Pais 19",
+          "pts": 6,
+          "gf": 5,
+          "ga": 3,
+          "gd": 2,
+          "position": 1
+        },
+        {
+          "team": "Pais 2",
+          "pts": 4,
+          "gf": 9,
+          "ga": 8,
+          "gd": 1,
+          "position": 2
+        },
+        {
+          "team": "Pais 17",
+          "pts": 4,
+          "gf": 9,
+          "ga": 8,
+          "gd": 1,
+          "position": 3
+        },
+        {
+          "team": "Pais 18",
+          "pts": 3,
+          "gf": 7,
+          "ga": 11,
+          "gd": -4,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Pais 2",
+          "away_team": "Pais 17",
+          "home_goals": 3,
+          "away_goals": 3,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 2",
+          "away_team": "Pais 18",
+          "home_goals": 5,
+          "away_goals": 2,
+          "winner": "Pais 2"
+        },
+        {
+          "home_team": "Pais 2",
+          "away_team": "Pais 19",
+          "home_goals": 1,
+          "away_goals": 3,
+          "winner": "Pais 19"
+        },
+        {
+          "home_team": "Pais 17",
+          "away_team": "Pais 18",
+          "home_goals": 4,
+          "away_goals": 5,
+          "winner": "Pais 18"
+        },
+        {
+          "home_team": "Pais 17",
+          "away_team": "Pais 19",
+          "home_goals": 2,
+          "away_goals": 0,
+          "winner": "Pais 17"
+        },
+        {
+          "home_team": "Pais 18",
+          "away_team": "Pais 19",
+          "home_goals": 0,
+          "away_goals": 2,
+          "winner": "Pais 19"
+        }
+      ]
+    },
+    {
+      "group": "D",
+      "standings": [
+        {
+          "team": "Pais 20",
+          "pts": 5,
+          "gf": 7,
+          "ga": 6,
+          "gd": 1,
+          "position": 1
+        },
+        {
+          "team": "Pais 23",
+          "pts": 4,
+          "gf": 8,
+          "ga": 6,
+          "gd": 2,
+          "position": 2
+        },
+        {
+          "team": "Pais 21",
+          "pts": 4,
+          "gf": 5,
+          "ga": 9,
+          "gd": -4,
+          "position": 3
+        },
+        {
+          "team": "Pais 22",
+          "pts": 3,
+          "gf": 8,
+          "ga": 7,
+          "gd": 1,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Pais 20",
+          "away_team": "Pais 21",
+          "home_goals": 1,
+          "away_goals": 1,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 20",
+          "away_team": "Pais 22",
+          "home_goals": 4,
+          "away_goals": 3,
+          "winner": "Pais 20"
+        },
+        {
+          "home_team": "Pais 20",
+          "away_team": "Pais 23",
+          "home_goals": 2,
+          "away_goals": 2,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 21",
+          "away_team": "Pais 22",
+          "home_goals": 0,
+          "away_goals": 5,
+          "winner": "Pais 22"
+        },
+        {
+          "home_team": "Pais 21",
+          "away_team": "Pais 23",
+          "home_goals": 4,
+          "away_goals": 3,
+          "winner": "Pais 21"
+        },
+        {
+          "home_team": "Pais 22",
+          "away_team": "Pais 23",
+          "home_goals": 0,
+          "away_goals": 3,
+          "winner": "Pais 23"
+        }
+      ]
+    },
+    {
+      "group": "E",
+      "standings": [
+        {
+          "team": "Pais 25",
+          "pts": 6,
+          "gf": 10,
+          "ga": 10,
+          "gd": 0,
+          "position": 1
+        },
+        {
+          "team": "Pais 26",
+          "pts": 4,
+          "gf": 10,
+          "ga": 8,
+          "gd": 2,
+          "position": 2
+        },
+        {
+          "team": "Pais 24",
+          "pts": 4,
+          "gf": 9,
+          "ga": 10,
+          "gd": -1,
+          "position": 3
+        },
+        {
+          "team": "Pais 27",
+          "pts": 2,
+          "gf": 12,
+          "ga": 13,
+          "gd": -1,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Pais 24",
+          "away_team": "Pais 25",
+          "home_goals": 1,
+          "away_goals": 3,
+          "winner": "Pais 25"
+        },
+        {
+          "home_team": "Pais 24",
+          "away_team": "Pais 26",
+          "home_goals": 3,
+          "away_goals": 2,
+          "winner": "Pais 24"
+        },
+        {
+          "home_team": "Pais 24",
+          "away_team": "Pais 27",
+          "home_goals": 5,
+          "away_goals": 5,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 25",
+          "away_team": "Pais 26",
+          "home_goals": 2,
+          "away_goals": 5,
+          "winner": "Pais 26"
+        },
+        {
+          "home_team": "Pais 25",
+          "away_team": "Pais 27",
+          "home_goals": 5,
+          "away_goals": 4,
+          "winner": "Pais 25"
+        },
+        {
+          "home_team": "Pais 26",
+          "away_team": "Pais 27",
+          "home_goals": 3,
+          "away_goals": 3,
+          "winner": null
+        }
+      ]
+    },
+    {
+      "group": "F",
+      "standings": [
+        {
+          "team": "Pais 29",
+          "pts": 7,
+          "gf": 12,
+          "ga": 6,
+          "gd": 6,
+          "position": 1
+        },
+        {
+          "team": "Pais 30",
+          "pts": 6,
+          "gf": 7,
+          "ga": 7,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Pais 3",
+          "pts": 4,
+          "gf": 9,
+          "ga": 6,
+          "gd": 3,
+          "position": 3
+        },
+        {
+          "team": "Pais 28",
+          "pts": 0,
+          "gf": 2,
+          "ga": 11,
+          "gd": -9,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Pais 3",
+          "away_team": "Pais 28",
+          "home_goals": 5,
+          "away_goals": 0,
+          "winner": "Pais 3"
+        },
+        {
+          "home_team": "Pais 3",
+          "away_team": "Pais 29",
+          "home_goals": 2,
+          "away_goals": 2,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 3",
+          "away_team": "Pais 30",
+          "home_goals": 2,
+          "away_goals": 4,
+          "winner": "Pais 30"
+        },
+        {
+          "home_team": "Pais 28",
+          "away_team": "Pais 29",
+          "home_goals": 2,
+          "away_goals": 5,
+          "winner": "Pais 29"
+        },
+        {
+          "home_team": "Pais 28",
+          "away_team": "Pais 30",
+          "home_goals": 0,
+          "away_goals": 1,
+          "winner": "Pais 30"
+        },
+        {
+          "home_team": "Pais 29",
+          "away_team": "Pais 30",
+          "home_goals": 5,
+          "away_goals": 2,
+          "winner": "Pais 29"
+        }
+      ]
+    },
+    {
+      "group": "G",
+      "standings": [
+        {
+          "team": "Pais 4",
+          "pts": 7,
+          "gf": 10,
+          "ga": 7,
+          "gd": 3,
+          "position": 1
+        },
+        {
+          "team": "Pais 32",
+          "pts": 6,
+          "gf": 12,
+          "ga": 7,
+          "gd": 5,
+          "position": 2
+        },
+        {
+          "team": "Pais 31",
+          "pts": 2,
+          "gf": 4,
+          "ga": 8,
+          "gd": -4,
+          "position": 3
+        },
+        {
+          "team": "Pais 5",
+          "pts": 1,
+          "gf": 9,
+          "ga": 13,
+          "gd": -4,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Pais 4",
+          "away_team": "Pais 5",
+          "home_goals": 5,
+          "away_goals": 3,
+          "winner": "Pais 4"
+        },
+        {
+          "home_team": "Pais 4",
+          "away_team": "Pais 31",
+          "home_goals": 1,
+          "away_goals": 1,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 4",
+          "away_team": "Pais 32",
+          "home_goals": 4,
+          "away_goals": 3,
+          "winner": "Pais 4"
+        },
+        {
+          "home_team": "Pais 5",
+          "away_team": "Pais 31",
+          "home_goals": 3,
+          "away_goals": 3,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 5",
+          "away_team": "Pais 32",
+          "home_goals": 3,
+          "away_goals": 5,
+          "winner": "Pais 32"
+        },
+        {
+          "home_team": "Pais 31",
+          "away_team": "Pais 32",
+          "home_goals": 0,
+          "away_goals": 4,
+          "winner": "Pais 32"
+        }
+      ]
+    },
+    {
+      "group": "H",
+      "standings": [
+        {
+          "team": "Pais 9",
+          "pts": 6,
+          "gf": 6,
+          "ga": 5,
+          "gd": 1,
+          "position": 1
+        },
+        {
+          "team": "Pais 6",
+          "pts": 5,
+          "gf": 8,
+          "ga": 6,
+          "gd": 2,
+          "position": 2
+        },
+        {
+          "team": "Pais 7",
+          "pts": 4,
+          "gf": 6,
+          "ga": 6,
+          "gd": 0,
+          "position": 3
+        },
+        {
+          "team": "Pais 8",
+          "pts": 1,
+          "gf": 6,
+          "ga": 9,
+          "gd": -3,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Pais 6",
+          "away_team": "Pais 7",
+          "home_goals": 1,
+          "away_goals": 1,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 6",
+          "away_team": "Pais 8",
+          "home_goals": 4,
+          "away_goals": 4,
+          "winner": null
+        },
+        {
+          "home_team": "Pais 6",
+          "away_team": "Pais 9",
+          "home_goals": 3,
+          "away_goals": 1,
+          "winner": "Pais 6"
+        },
+        {
+          "home_team": "Pais 7",
+          "away_team": "Pais 8",
+          "home_goals": 3,
+          "away_goals": 2,
+          "winner": "Pais 7"
+        },
+        {
+          "home_team": "Pais 7",
+          "away_team": "Pais 9",
+          "home_goals": 2,
+          "away_goals": 3,
+          "winner": "Pais 9"
+        },
+        {
+          "home_team": "Pais 8",
+          "away_team": "Pais 9",
+          "home_goals": 0,
+          "away_goals": 2,
+          "winner": "Pais 9"
+        }
+      ]
+    }
+  ],
+  "round_of_16": [
+    {
+      "home_team": "Pais 1",
+      "away_team": "Pais 14",
+      "home_goals": 3,
+      "away_goals": 1,
+      "winner": "Pais 1"
+    },
+    {
+      "home_team": "Pais 19",
+      "away_team": "Pais 23",
+      "home_goals": 4,
+      "away_goals": 1,
+      "winner": "Pais 19"
+    },
+    {
+      "home_team": "Pais 25",
+      "away_team": "Pais 30",
+      "home_goals": 3,
+      "away_goals": 2,
+      "winner": "Pais 25"
+    },
+    {
+      "home_team": "Pais 4",
+      "away_team": "Pais 6",
+      "home_goals": 3,
+      "away_goals": 5,
+      "winner": "Pais 6"
+    },
+    {
+      "home_team": "Pais 13",
+      "away_team": "Pais 10",
+      "home_goals": 3,
+      "away_goals": 4,
+      "winner": "Pais 10"
+    },
+    {
+      "home_team": "Pais 20",
+      "away_team": "Pais 2",
+      "home_goals": 0,
+      "away_goals": 0,
+      "winner": "Pais 2"
+    },
+    {
+      "home_team": "Pais 29",
+      "away_team": "Pais 26",
+      "home_goals": 4,
+      "away_goals": 3,
+      "winner": "Pais 29"
+    },
+    {
+      "home_team": "Pais 9",
+      "away_team": "Pais 32",
+      "home_goals": 4,
+      "away_goals": 2,
+      "winner": "Pais 9"
+    }
+  ],
+  "quarterfinals": [
+    {
+      "home_team": "Pais 1",
+      "away_team": "Pais 19",
+      "home_goals": 2,
+      "away_goals": 4,
+      "winner": "Pais 19"
+    },
+    {
+      "home_team": "Pais 25",
+      "away_team": "Pais 6",
+      "home_goals": 0,
+      "away_goals": 2,
+      "winner": "Pais 6"
+    },
+    {
+      "home_team": "Pais 10",
+      "away_team": "Pais 2",
+      "home_goals": 4,
+      "away_goals": 0,
+      "winner": "Pais 10"
+    },
+    {
+      "home_team": "Pais 29",
+      "away_team": "Pais 9",
+      "home_goals": 0,
+      "away_goals": 0,
+      "winner": "Pais 9"
+    }
+  ],
+  "semifinals": [
+    {
+      "home_team": "Pais 19",
+      "away_team": "Pais 6",
+      "home_goals": 2,
+      "away_goals": 2,
+      "winner": "Pais 19"
+    },
+    {
+      "home_team": "Pais 10",
+      "away_team": "Pais 9",
+      "home_goals": 4,
+      "away_goals": 0,
+      "winner": "Pais 10"
+    }
+  ],
+  "third_place": {
+    "home_team": "Pais 6",
+    "away_team": "Pais 9",
+    "home_goals": 2,
+    "away_goals": 1,
+    "winner": "Pais 6"
+  },
+  "final": {
+    "home_team": "Pais 19",
+    "away_team": "Pais 10",
+    "home_goals": 2,
+    "away_goals": 4,
+    "winner": "Pais 10"
+  },
+  "champion": "Pais 10"
+}
