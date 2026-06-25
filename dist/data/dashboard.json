@@ -1,11 +1,11 @@
 {
-  "champion": "Pais 20",
+  "champion": "Francia",
   "top_scorer": {
-    "player_name": "Theo Pirlo 20-1",
-    "team_name": "Pais 20",
-    "goals": 13
+    "player_name": "Aiden Cafu Francia-2",
+    "team_name": "Francia",
+    "goals": 17
   },
-  "avg_goals_per_match": 4.7,
-  "total_goals": 301,
+  "avg_goals_per_match": 5.36,
+  "total_goals": 343,
   "total_matches": 64
 }

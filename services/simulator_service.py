@@ -39,16 +39,28 @@ class SimulatorService:
         from schemas.team import TeamCreate
         from schemas.player import PlayerCreate
 
+        COUNTRIES = [
+            "Argentina", "Brasil", "Francia", "Inglaterra", "Alemania", "España",
+            "Portugal", "Países Bajos", "Bélgica", "Croacia", "Italia", "Uruguay",
+            "México", "Estados Unidos", "Colombia", "Chile",
+            "Japón", "Corea del Sur", "Arabia Saudita", "Irán", "Australia",
+            "Camerún", "Ghana", "Marruecos", "Senegal", "Túnez",
+            "Canadá", "Ecuador", "Perú", "Paraguay", "Suiza", "Dinamarca",
+        ]
+
         existing_count = self.team_repo.count()
-        needed = 32 - existing_count
-        start = existing_count + 1
-        for i in range(start, start + needed):
-            code = f"P{i:02d}"
-            team = self.team_repo.create(TeamCreate(name=f"Pais {i}", code=code))
+        for idx in range(existing_count, 32):
+            country = COUNTRIES[idx]
+            code = country[:3].upper()
+            team = self.team_repo.create(TeamCreate(name=country, code=code))
             for player_index in range(2):
                 fname = random.choice(FIRST_NAMES)
                 lname = random.choice(POSITION_POOL[random.choice(POSITIONS)])
-                self.player_repo.create(PlayerCreate(name=f"{fname} {lname} {i}-{player_index + 1}", position=random.choice(POSITIONS), team_id=team.id))
+                self.player_repo.create(PlayerCreate(
+                    name=f"{fname} {lname} {country}-{player_index + 1}",
+                    position=random.choice(POSITIONS),
+                    team_id=team.id,
+                ))
 
     def _assign_groups(self):
         teams = self.team_repo.get_all()

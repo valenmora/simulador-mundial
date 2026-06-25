@@ -1,226 +1,226 @@
 [
   {
     "id": 1,
-    "name": "Pais 1",
-    "code": "P01",
+    "name": "Argentina",
+    "code": "ARG",
     "group_name": "A",
-    "created_at": "2026-06-11T21:44:36"
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 2,
-    "name": "Pais 2",
-    "code": "P02",
-    "group_name": "C",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Brasil",
+    "code": "BRA",
+    "group_name": "B",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 3,
-    "name": "Pais 3",
-    "code": "P03",
-    "group_name": "F",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Francia",
+    "code": "FRA",
+    "group_name": "E",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 4,
-    "name": "Pais 4",
-    "code": "P04",
-    "group_name": "G",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Inglaterra",
+    "code": "ING",
+    "group_name": "E",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 5,
-    "name": "Pais 5",
-    "code": "P05",
-    "group_name": "G",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Alemania",
+    "code": "ALE",
+    "group_name": "A",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 6,
-    "name": "Pais 6",
-    "code": "P06",
-    "group_name": "H",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "España",
+    "code": "ESP",
+    "group_name": "D",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 7,
-    "name": "Pais 7",
-    "code": "P07",
-    "group_name": "H",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Portugal",
+    "code": "POR",
+    "group_name": "G",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 8,
-    "name": "Pais 8",
-    "code": "P08",
-    "group_name": "H",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Países Bajos",
+    "code": "PAÍ",
+    "group_name": "G",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 9,
-    "name": "Pais 9",
-    "code": "P09",
-    "group_name": "H",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Bélgica",
+    "code": "BÉL",
+    "group_name": "B",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 10,
-    "name": "Pais 10",
-    "code": "P10",
-    "group_name": "A",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Croacia",
+    "code": "CRO",
+    "group_name": "C",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 11,
-    "name": "Pais 11",
-    "code": "P11",
-    "group_name": "A",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Italia",
+    "code": "ITA",
+    "group_name": "F",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 12,
-    "name": "Pais 12",
-    "code": "P12",
-    "group_name": "A",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Uruguay",
+    "code": "URU",
+    "group_name": "H",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 13,
-    "name": "Pais 13",
-    "code": "P13",
-    "group_name": "B",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "México",
+    "code": "MÉX",
+    "group_name": "F",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 14,
-    "name": "Pais 14",
-    "code": "P14",
-    "group_name": "B",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Estados Unidos",
+    "code": "EST",
+    "group_name": "D",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 15,
-    "name": "Pais 15",
-    "code": "P15",
-    "group_name": "B",
-    "created_at": "2026-06-11T21:44:36"
+    "name": "Colombia",
+    "code": "COL",
+    "group_name": "C",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 16,
-    "name": "Pais 16",
-    "code": "P16",
-    "group_name": "B",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Chile",
+    "code": "CHI",
+    "group_name": "C",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 17,
-    "name": "Pais 17",
-    "code": "P17",
-    "group_name": "C",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Japón",
+    "code": "JAP",
+    "group_name": "F",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 18,
-    "name": "Pais 18",
-    "code": "P18",
+    "name": "Corea del Sur",
+    "code": "COR",
     "group_name": "C",
-    "created_at": "2026-06-11T21:44:37"
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 19,
-    "name": "Pais 19",
-    "code": "P19",
-    "group_name": "C",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Arabia Saudita",
+    "code": "ARA",
+    "group_name": "A",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 20,
-    "name": "Pais 20",
-    "code": "P20",
-    "group_name": "D",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Irán",
+    "code": "IRÁ",
+    "group_name": "E",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 21,
-    "name": "Pais 21",
-    "code": "P21",
-    "group_name": "D",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Australia",
+    "code": "AUS",
+    "group_name": "A",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 22,
-    "name": "Pais 22",
-    "code": "P22",
-    "group_name": "D",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Camerún",
+    "code": "CAM",
+    "group_name": "B",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 23,
-    "name": "Pais 23",
-    "code": "P23",
-    "group_name": "D",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Ghana",
+    "code": "GHA",
+    "group_name": "E",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 24,
-    "name": "Pais 24",
-    "code": "P24",
-    "group_name": "E",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Marruecos",
+    "code": "MAR",
+    "group_name": "F",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 25,
-    "name": "Pais 25",
-    "code": "P25",
-    "group_name": "E",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Senegal",
+    "code": "SEN",
+    "group_name": "H",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 26,
-    "name": "Pais 26",
-    "code": "P26",
-    "group_name": "E",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Túnez",
+    "code": "TÚN",
+    "group_name": "H",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 27,
-    "name": "Pais 27",
-    "code": "P27",
-    "group_name": "E",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Canadá",
+    "code": "CAN",
+    "group_name": "B",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 28,
-    "name": "Pais 28",
-    "code": "P28",
-    "group_name": "F",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Ecuador",
+    "code": "ECU",
+    "group_name": "D",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 29,
-    "name": "Pais 29",
-    "code": "P29",
-    "group_name": "F",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Perú",
+    "code": "PER",
+    "group_name": "G",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 30,
-    "name": "Pais 30",
-    "code": "P30",
-    "group_name": "F",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Paraguay",
+    "code": "PAR",
+    "group_name": "G",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 31,
-    "name": "Pais 31",
-    "code": "P31",
-    "group_name": "G",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Suiza",
+    "code": "SUI",
+    "group_name": "H",
+    "created_at": "2026-06-25T21:49:55"
   },
   {
     "id": 32,
-    "name": "Pais 32",
-    "code": "P32",
-    "group_name": "G",
-    "created_at": "2026-06-11T21:44:37"
+    "name": "Dinamarca",
+    "code": "DIN",
+    "group_name": "D",
+    "created_at": "2026-06-25T21:49:55"
   }
 ]
