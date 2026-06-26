@@ -1,11 +1,11 @@
 {
-  "champion": "Ghana",
+  "champion": "Turquía",
   "top_scorer": {
-    "player_name": "Ismaël Bennacer",
-    "team_name": "Argelia",
-    "goals": 14
+    "player_name": "Edin Džeko",
+    "team_name": "Bosnia y Herzegovina",
+    "goals": 17
   },
-  "avg_goals_per_match": 5.39,
-  "total_goals": 345,
+  "avg_goals_per_match": 5.27,
+  "total_goals": 337,
   "total_matches": 64
 }

@@ -86,6 +86,8 @@ def build_html(simulation, dashboard, teams, players):
 
     avg_goals = round(total_goals / total_matches, 2) if total_matches else 0
 
+    team_codes = {t["name"]: t["code"] for t in teams}
+
     def render_groups():
         html = '<div class="row g-3">'
         for g in groups:
@@ -96,7 +98,7 @@ def build_html(simulation, dashboard, teams, players):
               <div class="group-card">
                 <div class="group-header">Grupo {gn}</div>
                 <table class="group-table">
-                  <thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GA</th><th>DG</th></tr></thead>
+                  <thead><tr><th>#</th><th>Eq.</th><th>Pts</th><th>GF</th><th>GA</th><th>DG</th></tr></thead>
                   <tbody>'''
             for s in standings:
                 pos = s.get("position", 0)
@@ -104,10 +106,11 @@ def build_html(simulation, dashboard, teams, players):
                 cls_row = "qualified" if pos <= 2 else "eliminated"
                 gd = s.get("gd", 0)
                 gd_str = f"+{gd}" if gd >= 0 else str(gd)
+                team_name = s.get("team", "")
                 html += f'''
                     <tr class="{cls_row}">
                       <td><span class="position-badge {pc}">{pos}</span></td>
-                      <td><span class="team-name" title="{s.get('team', '')}">{s.get("team", "")}</span></td>
+                      <td><span class="team-code">{team_codes.get(team_name, team_name)}</span></td>
                       <td><strong>{s.get("pts", 0)}</strong></td>
                       <td>{s.get("gf", 0)}</td>
                       <td>{s.get("ga", 0)}</td>
@@ -559,8 +562,8 @@ def render_teams(teams):
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
             <div class="group-header">Grupo {letter}</div>
-            <table class="group-table">
-              <thead><tr><th></th><th>Equipo</th><th>Cod.</th></tr></thead>
+             <table class="group-table">
+               <thead><tr><th style="width:12%"></th><th style="width:60%">Equipo</th><th style="width:28%">Cod.</th></tr></thead>
               <tbody>'''
         for i, t in enumerate(gteams):
             cls_row = "qualified" if i < 2 else "eliminated"
