@@ -1,11 +1,11 @@
 {
-  "champion": "Jordania",
+  "champion": "Haití",
   "top_scorer": {
-    "player_name": "Musa Al-Taamari",
-    "team_name": "Jordania",
-    "goals": 17
+    "player_name": "Youssef En-Nesyri",
+    "team_name": "Marruecos",
+    "goals": 12
   },
-  "avg_goals_per_match": 5.34,
-  "total_goals": 342,
+  "avg_goals_per_match": 5.0,
+  "total_goals": 320,
   "total_matches": 64
 }

@@ -1,450 +1,450 @@
 [
   {
     "id": 1,
-    "name": "Christian Pulisic",
+    "name": "Duckens Nazon",
     "position": "FW",
     "team_id": 1,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 2,
-    "name": "Weston McKennie",
+    "name": "Danley Jean Jacques",
     "position": "MF",
     "team_id": 1,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 3,
-    "name": "Salem Al-Dawsari",
+    "name": "Erling Haaland",
     "position": "FW",
     "team_id": 2,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 4,
-    "name": "Firas Al-Buraikan",
-    "position": "FW",
+    "name": "Martin Ødegaard",
+    "position": "MF",
     "team_id": 2,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 5,
-    "name": "Harry Kane",
+    "name": "Salem Al-Dawsari",
     "position": "FW",
     "team_id": 3,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 6,
-    "name": "Jude Bellingham",
-    "position": "MF",
+    "name": "Firas Al-Buraikan",
+    "position": "FW",
     "team_id": 3,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 7,
-    "name": "Arda Güler",
-    "position": "MF",
+    "name": "Cristiano Ronaldo",
+    "position": "FW",
     "team_id": 4,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 8,
-    "name": "Hakan Çalhanoğlu",
+    "name": "Bruno Fernandes",
     "position": "MF",
     "team_id": 4,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 9,
-    "name": "Leandro Bacuna",
-    "position": "MF",
+    "name": "Alexander Isak",
+    "position": "FW",
     "team_id": 5,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 10,
-    "name": "Eloy Room",
-    "position": "GK",
+    "name": "Anthony Elanga",
+    "position": "FW",
     "team_id": 5,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 11,
-    "name": "Alexander Isak",
-    "position": "FW",
+    "name": "Alphonso Davies",
+    "position": "DF",
     "team_id": 6,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 12,
-    "name": "Anthony Elanga",
+    "name": "Jonathan David",
     "position": "FW",
     "team_id": 6,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 13,
-    "name": "Jamal Musiala",
-    "position": "MF",
+    "name": "Chancel Mbemba",
+    "position": "DF",
     "team_id": 7,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 14,
-    "name": "Florian Wirtz",
-    "position": "MF",
+    "name": "Yoane Wissa",
+    "position": "FW",
     "team_id": 7,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 15,
-    "name": "Lionel Messi",
+    "name": "Mehdi Taremi",
     "position": "FW",
     "team_id": 8,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 16,
-    "name": "Julián Álvarez",
+    "name": "Sardar Azmoun",
     "position": "FW",
     "team_id": 8,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 17,
-    "name": "Mohamed Salah",
-    "position": "FW",
+    "name": "David Alaba",
+    "position": "DF",
     "team_id": 9,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 18,
-    "name": "Omar Marmoush",
-    "position": "FW",
+    "name": "Marcel Sabitzer",
+    "position": "MF",
     "team_id": 9,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 19,
-    "name": "Vinícius Júnior",
+    "name": "Miguel Almirón",
     "position": "FW",
     "team_id": 10,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 20,
-    "name": "Rodrygo",
+    "name": "Julio Enciso",
     "position": "FW",
     "team_id": 10,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 21,
-    "name": "Adalberto Carrasquilla",
-    "position": "MF",
+    "name": "Sadio Mané",
+    "position": "FW",
     "team_id": 11,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 22,
-    "name": "José Fajardo",
-    "position": "FW",
+    "name": "Kalidou Koulibaly",
+    "position": "DF",
     "team_id": 11,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 23,
-    "name": "Duckens Nazon",
+    "name": "Riyad Mahrez",
     "position": "FW",
     "team_id": 12,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 24,
-    "name": "Danley Jean Jacques",
+    "name": "Ismaël Bennacer",
     "position": "MF",
     "team_id": 12,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 25,
-    "name": "Luka Modrić",
-    "position": "MF",
+    "name": "Mathew Ryan",
+    "position": "GK",
     "team_id": 13,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 26,
-    "name": "Joško Gvardiol",
-    "position": "DF",
+    "name": "Jackson Irvine",
+    "position": "MF",
     "team_id": 13,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 27,
-    "name": "Granit Xhaka",
-    "position": "MF",
+    "name": "Virgil van Dijk",
+    "position": "DF",
     "team_id": 14,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 28,
-    "name": "Manuel Akanji",
-    "position": "DF",
+    "name": "Cody Gakpo",
+    "position": "FW",
     "team_id": 14,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 29,
-    "name": "Kevin De Bruyne",
-    "position": "MF",
+    "name": "Akram Afif",
+    "position": "FW",
     "team_id": 15,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 30,
-    "name": "Jérémy Doku",
+    "name": "Almoez Ali",
     "position": "FW",
     "team_id": 15,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 31,
-    "name": "Mohammed Kudus",
-    "position": "FW",
+    "name": "Adalberto Carrasquilla",
+    "position": "MF",
     "team_id": 16,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 32,
-    "name": "Thomas Partey",
-    "position": "MF",
+    "name": "José Fajardo",
+    "position": "FW",
     "team_id": 16,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 33,
-    "name": "Ryan Mendes",
+    "name": "Lamine Yamal",
     "position": "FW",
     "team_id": 17,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 34,
-    "name": "Jamiro Monteiro",
+    "name": "Pedri",
     "position": "MF",
     "team_id": 17,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 35,
-    "name": "Mathew Ryan",
-    "position": "GK",
+    "name": "Achraf Hakimi",
+    "position": "DF",
     "team_id": 18,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 36,
-    "name": "Jackson Irvine",
-    "position": "MF",
+    "name": "Youssef En-Nesyri",
+    "position": "FW",
     "team_id": 18,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 37,
-    "name": "Cristiano Ronaldo",
+    "name": "Santiago Giménez",
     "position": "FW",
     "team_id": 19,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 38,
-    "name": "Bruno Fernandes",
+    "name": "Edson Álvarez",
     "position": "MF",
     "team_id": 19,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 39,
-    "name": "Youssef Msakni",
+    "name": "Vinícius Júnior",
     "position": "FW",
     "team_id": 20,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 40,
-    "name": "Ellyes Skhiri",
-    "position": "MF",
+    "name": "Rodrygo",
+    "position": "FW",
     "team_id": 20,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 41,
-    "name": "Virgil van Dijk",
-    "position": "DF",
+    "name": "Leandro Bacuna",
+    "position": "MF",
     "team_id": 21,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 42,
-    "name": "Cody Gakpo",
-    "position": "FW",
+    "name": "Eloy Room",
+    "position": "GK",
     "team_id": 21,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 43,
-    "name": "Kylian Mbappé",
+    "name": "Sébastien Haller",
     "position": "FW",
     "team_id": 22,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 44,
-    "name": "Ousmane Dembélé",
+    "name": "Simon Adingra",
     "position": "FW",
     "team_id": 22,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 45,
-    "name": "Santiago Giménez",
+    "name": "Aymen Hussein",
     "position": "FW",
     "team_id": 23,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 46,
-    "name": "Edson Álvarez",
+    "name": "Ibrahim Bayesh",
     "position": "MF",
     "team_id": 23,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 47,
-    "name": "Alphonso Davies",
-    "position": "DF",
+    "name": "Ryan Mendes",
+    "position": "FW",
     "team_id": 24,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 48,
-    "name": "Jonathan David",
-    "position": "FW",
+    "name": "Jamiro Monteiro",
+    "position": "MF",
     "team_id": 24,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 49,
-    "name": "Achraf Hakimi",
-    "position": "DF",
+    "name": "Arda Güler",
+    "position": "MF",
     "team_id": 25,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 50,
-    "name": "Youssef En-Nesyri",
-    "position": "FW",
+    "name": "Hakan Çalhanoğlu",
+    "position": "MF",
     "team_id": 25,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 51,
-    "name": "Sébastien Haller",
+    "name": "Christian Pulisic",
     "position": "FW",
     "team_id": 26,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 52,
-    "name": "Simon Adingra",
-    "position": "FW",
+    "name": "Weston McKennie",
+    "position": "MF",
     "team_id": 26,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 53,
-    "name": "Son Heung-min",
+    "name": "Lionel Messi",
     "position": "FW",
     "team_id": 27,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 54,
-    "name": "Lee Kang-in",
-    "position": "MF",
+    "name": "Julián Álvarez",
+    "position": "FW",
     "team_id": 27,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 55,
-    "name": "Chris Wood",
+    "name": "Musa Al-Taamari",
     "position": "FW",
     "team_id": 28,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 56,
-    "name": "Liberato Cacace",
-    "position": "DF",
+    "name": "Yazan Al-Naimat",
+    "position": "FW",
     "team_id": 28,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 57,
-    "name": "Riyad Mahrez",
-    "position": "FW",
+    "name": "Moisés Caicedo",
+    "position": "MF",
     "team_id": 29,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 58,
-    "name": "Ismaël Bennacer",
-    "position": "MF",
+    "name": "Piero Hincapié",
+    "position": "DF",
     "team_id": 29,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 59,
-    "name": "Musa Al-Taamari",
-    "position": "FW",
+    "name": "Federico Valverde",
+    "position": "MF",
     "team_id": 30,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 60,
-    "name": "Yazan Al-Naimat",
+    "name": "Darwin Núñez",
     "position": "FW",
     "team_id": 30,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 61,
-    "name": "Luis Díaz",
-    "position": "FW",
+    "name": "Jamal Musiala",
+    "position": "MF",
     "team_id": 31,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 62,
-    "name": "James Rodríguez",
+    "name": "Florian Wirtz",
     "position": "MF",
     "team_id": 31,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 63,
-    "name": "Edin Džeko",
+    "name": "Kylian Mbappé",
     "position": "FW",
     "team_id": 32,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   },
   {
     "id": 64,
-    "name": "Ermedin Demirović",
+    "name": "Ousmane Dembélé",
     "position": "FW",
     "team_id": 32,
-    "created_at": "2026-06-26T18:59:04"
+    "created_at": "2026-06-26T19:48:35"
   }
 ]

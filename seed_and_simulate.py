@@ -134,7 +134,7 @@ def build_html(simulation, dashboard, teams, players):
                 html += f'''
                     <tr class="{cls_row}">
                       <td><span class="position-badge {pc}">{pos}</span></td>
-                      <td>{team_flags.get(team_name, "")}<span class="team-code">{team_codes.get(team_name, team_name)}</span></td>
+                      <td><span class="team-code">{team_codes.get(team_name, team_name)}</span></td>
                       <td><strong>{s.get("pts", 0)}</strong></td>
                       <td>{s.get("gf", 0)}</td>
                       <td>{s.get("ga", 0)}</td>
@@ -711,7 +711,7 @@ def render_teams(teams):
             html += f'''
                 <tr class="{cls_row}">
                   <td><span class="position-badge {pc}">{i + 1}</span></td>
-                  <td><span class="team-name">{flag_img(tcode)} {tname}</span></td>
+                  <td><span class="team-name">{tname}</span></td>
                   <td>{tcode}</td>
                 </tr>'''
         html += '''
