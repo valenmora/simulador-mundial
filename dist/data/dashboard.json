@@ -1,11 +1,11 @@
 {
-  "champion": "República Checa",
+  "champion": "Argentina",
   "top_scorer": {
-    "player_name": "Alphonso Davies",
-    "team_name": "Canadá",
-    "goals": 16
+    "player_name": "Mehdi Taremi",
+    "team_name": "Irán",
+    "goals": 14
   },
-  "avg_goals_per_match": 5.58,
-  "total_goals": 357,
+  "avg_goals_per_match": 4.8,
+  "total_goals": 307,
   "total_matches": 64
 }

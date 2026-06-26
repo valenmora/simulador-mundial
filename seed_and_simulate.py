@@ -143,6 +143,37 @@ def build_html(simulation, dashboard, teams, players):
               <div class="classified-row">&#x1F3C6; CLASIFICA {winner}</div>
             </div>'''
 
+    def render_final_card(m, role="champion"):
+        home = m.get("home_team", "?")
+        away = m.get("away_team", "?")
+        hg = m.get("home_goals", 0)
+        ag = m.get("away_goals", 0)
+        winner = m.get("winner", "")
+        if role == "champion":
+            return f'''
+            <div class="final-card champion-card">
+              <div class="match-scores-row">
+                <div class="team-name left">{home}</div>
+                <div class="score-display final-score">{hg} : {ag}</div>
+                <div class="team-name right">{away}</div>
+              </div>
+              <hr class="match-divider">
+              <div class="champion-declaration">
+                <div class="champion-label">&#x1F3C6; CAMPEON DEL MUNDO</div>
+                <div class="champion-team-name">{winner}</div>
+              </div>
+            </div>'''
+        return f'''
+            <div class="final-card third-place-final-card">
+              <div class="match-scores-row">
+                <div class="team-name left">{home}</div>
+                <div class="score-display third-score">{hg} : {ag}</div>
+                <div class="team-name right">{away}</div>
+              </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F949; CLASIFICA {winner}</div>
+            </div>'''
+
     def render_bracket():
         html = ""
         for key, label, cls in bracket_rounds:
@@ -157,22 +188,23 @@ def build_html(simulation, dashboard, teams, players):
                 html += render_match_row(m)
             html += "</div></div>"
 
+        html += '''
+        <div class="knockout-section final-phase">
+          <div class="round-header final-phase-header">&#x1F3C6; FASE FINAL</div>
+          <div class="final-phase-grid">
+            <div class="third-place-col">'''
         if third_place:
             html += f'''
-            <div class="knockout-section third-place">
-              <div class="round-header" style="background:var(--cda-text-light);font-size:0.75rem;">Tercer Puesto</div>
-              <div class="bracket-grid third-place-grid">
-                {render_match_row(third_place, compact=True)}
-              </div>
-            </div>'''
-
+              <div class="final-sub-header third-place-sub-header">&#x1F949; Tercer Puesto</div>
+              {render_final_card(third_place, role="third_place")}'''
         html += f'''
-            <div class="knockout-section final-round">
-              <div class="round-header">Final</div>
-              <div class="bracket-grid final-grid">
-                {render_match_row(final)}
-              </div>
-            </div>'''
+            </div>
+            <div class="final-col">
+              <div class="final-sub-header champion-sub-header">&#x1F3C6; Final</div>
+              {render_final_card(final, role="champion")}
+            </div>
+          </div>
+        </div>'''
         return html
 
     html_content = f'''<!DOCTYPE html>
@@ -393,6 +425,63 @@ def build_html(simulation, dashboard, teams, players):
       .knockout-card {{ padding: 16px; }}
       .score-display {{ font-size: 28px; min-width: 80px; }}
       .match-divider {{ margin: 12px 0 8px; }}
+    }}
+    .final-phase-grid {{
+      display: flex; gap: 24px; align-items: stretch;
+    }}
+    .third-place-col {{
+      flex: 0 0 35%; max-width: 35%; display: flex; flex-direction: column;
+    }}
+    .final-col {{
+      flex: 0 0 65%; max-width: 65%; display: flex; flex-direction: column;
+    }}
+    .final-phase-header {{
+      font-size: 1rem; padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--cda-dark) 0%, var(--cda-primary) 100%);
+    }}
+    .final-sub-header {{
+      text-align: center; font-weight: 700; font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 2px;
+      padding: 0.6rem 1rem; background: var(--cda-light-bg);
+      color: var(--cda-text-light);
+    }}
+    .champion-sub-header {{
+      background: linear-gradient(135deg, var(--cda-dark), var(--cda-primary));
+      color: #fff; font-size: 0.85rem;
+    }}
+    .third-place-sub-header {{
+      background: var(--cda-light-bg); color: var(--cda-text-light);
+    }}
+    .final-card {{
+      background: #fff; border-radius: 0 0 14px 14px; padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,30,60,0.08); flex: 1;
+    }}
+    .champion-card {{
+      padding: 32px 28px;
+    }}
+    .final-score {{
+      font-size: 54px;
+    }}
+    .third-score {{
+      font-size: 32px; min-width: 80px;
+    }}
+    .champion-declaration {{
+      text-align: center;
+    }}
+    .champion-label {{
+      font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--cda-text-light); margin-bottom: 4px;
+    }}
+    .champion-team-name {{
+      font-family: "Poppins", sans-serif; font-size: 1.5rem;
+      font-weight: 700; color: var(--cda-primary);
+    }}
+    .third-place-final-card {{
+      padding: 20px;
+    }}
+    @media (max-width: 991px) {{
+      .final-phase-grid {{ flex-direction: column; }}
+      .third-place-col, .final-col {{ flex: 0 0 100%; max-width: 100%; }}
     }}
     .champion-banner {{
       background: linear-gradient(135deg, var(--cda-primary) 0%, var(--cda-dark) 100%);
