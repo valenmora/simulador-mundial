@@ -116,9 +116,9 @@ class SimulatorService:
         teams = self.team_repo.get_all()
         for team in teams:
             count = self.player_repo.count_by_team(team.id)
-            if count < 3:
+            if count < 2:
                 from schemas.player import PlayerCreate
-                needed = 3 - count
+                needed = 2 - count
                 for player_index in range(needed):
                     fname = random.choice(FIRST_NAMES)
                     lname = random.choice(POSITION_POOL[random.choice(POSITIONS)])

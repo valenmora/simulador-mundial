@@ -1,11 +1,11 @@
 {
-  "champion": "Irak",
+  "champion": "Egipto",
   "top_scorer": {
-    "player_name": "Harry Kane",
-    "team_name": "Inglaterra",
-    "goals": 10
+    "player_name": "Musa Al-Taamari",
+    "team_name": "Jordania",
+    "goals": 13
   },
-  "avg_goals_per_match": 5.3,
-  "total_goals": 339,
+  "avg_goals_per_match": 4.86,
+  "total_goals": 311,
   "total_matches": 64
 }

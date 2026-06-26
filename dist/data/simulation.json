@@ -4,80 +4,80 @@
       "group": "A",
       "standings": [
         {
-          "team": "Arabia Saudita",
-          "pts": 6,
-          "gf": 8,
-          "ga": 6,
-          "gd": 2,
-          "position": 1
-        },
-        {
           "team": "Alemania",
-          "pts": 4,
-          "gf": 8,
-          "ga": 7,
-          "gd": 1,
-          "position": 2
+          "pts": 7,
+          "gf": 14,
+          "ga": 9,
+          "gd": 5,
+          "position": 1
         },
         {
           "team": "Argelia",
           "pts": 4,
-          "gf": 9,
+          "gf": 7,
           "ga": 9,
-          "gd": 0,
-          "position": 3
+          "gd": -2,
+          "position": 2
         },
         {
           "team": "Argentina",
           "pts": 3,
-          "gf": 7,
-          "ga": 10,
-          "gd": -3,
+          "gf": 8,
+          "ga": 6,
+          "gd": 2,
+          "position": 3
+        },
+        {
+          "team": "Bosnia y Herzegovina",
+          "pts": 3,
+          "gf": 4,
+          "ga": 9,
+          "gd": -5,
           "position": 4
         }
       ],
       "matches": [
         {
-          "home_team": "Argelia",
-          "away_team": "Arabia Saudita",
-          "home_goals": 3,
-          "away_goals": 4,
-          "winner": "Arabia Saudita"
-        },
-        {
-          "home_team": "Argelia",
-          "away_team": "Alemania",
-          "home_goals": 1,
-          "away_goals": 1,
-          "winner": null
-        },
-        {
-          "home_team": "Argelia",
+          "home_team": "Alemania",
           "away_team": "Argentina",
-          "home_goals": 5,
-          "away_goals": 4,
-          "winner": "Argelia"
-        },
-        {
-          "home_team": "Arabia Saudita",
-          "away_team": "Alemania",
           "home_goals": 4,
-          "away_goals": 2,
-          "winner": "Arabia Saudita"
-        },
-        {
-          "home_team": "Arabia Saudita",
-          "away_team": "Argentina",
-          "home_goals": 0,
-          "away_goals": 1,
-          "winner": "Argentina"
+          "away_goals": 3,
+          "winner": "Alemania"
         },
         {
           "home_team": "Alemania",
-          "away_team": "Argentina",
+          "away_team": "Bosnia y Herzegovina",
           "home_goals": 5,
-          "away_goals": 2,
+          "away_goals": 1,
           "winner": "Alemania"
+        },
+        {
+          "home_team": "Alemania",
+          "away_team": "Argelia",
+          "home_goals": 5,
+          "away_goals": 5,
+          "winner": null
+        },
+        {
+          "home_team": "Argentina",
+          "away_team": "Bosnia y Herzegovina",
+          "home_goals": 4,
+          "away_goals": 0,
+          "winner": "Argentina"
+        },
+        {
+          "home_team": "Argentina",
+          "away_team": "Argelia",
+          "home_goals": 1,
+          "away_goals": 2,
+          "winner": "Argelia"
+        },
+        {
+          "home_team": "Bosnia y Herzegovina",
+          "away_team": "Argelia",
+          "home_goals": 3,
+          "away_goals": 0,
+          "winner": "Bosnia y Herzegovina"
         }
       ]
     },
@@ -85,7 +85,7 @@
       "group": "B",
       "standings": [
         {
-          "team": "Bosnia y Herzegovina",
+          "team": "Brasil",
           "pts": 6,
           "gf": 11,
           "ga": 6,
@@ -95,68 +95,68 @@
         {
           "team": "Bélgica",
           "pts": 6,
-          "gf": 10,
-          "ga": 9,
-          "gd": 1,
+          "gf": 7,
+          "ga": 5,
+          "gd": 2,
           "position": 2
         },
         {
-          "team": "Australia",
+          "team": "Corea del Sur",
           "pts": 4,
-          "gf": 10,
+          "gf": 5,
           "ga": 7,
-          "gd": 3,
+          "gd": -2,
           "position": 3
         },
         {
-          "team": "Corea del Sur",
+          "team": "Canadá",
           "pts": 1,
           "gf": 3,
-          "ga": 12,
-          "gd": -9,
+          "ga": 8,
+          "gd": -5,
           "position": 4
         }
       ],
       "matches": [
         {
-          "home_team": "Bosnia y Herzegovina",
-          "away_team": "Australia",
-          "home_goals": 1,
-          "away_goals": 5,
-          "winner": "Australia"
-        },
-        {
-          "home_team": "Bosnia y Herzegovina",
-          "away_team": "Bélgica",
-          "home_goals": 5,
-          "away_goals": 1,
-          "winner": "Bosnia y Herzegovina"
-        },
-        {
-          "home_team": "Bosnia y Herzegovina",
-          "away_team": "Corea del Sur",
-          "home_goals": 5,
+          "home_team": "Corea del Sur",
+          "away_team": "Canadá",
+          "home_goals": 0,
           "away_goals": 0,
-          "winner": "Bosnia y Herzegovina"
-        },
-        {
-          "home_team": "Australia",
-          "away_team": "Bélgica",
-          "home_goals": 3,
-          "away_goals": 4,
-          "winner": "Bélgica"
-        },
-        {
-          "home_team": "Australia",
-          "away_team": "Corea del Sur",
-          "home_goals": 2,
-          "away_goals": 2,
           "winner": null
         },
         {
+          "home_team": "Corea del Sur",
+          "away_team": "Bélgica",
+          "home_goals": 3,
+          "away_goals": 2,
+          "winner": "Corea del Sur"
+        },
+        {
+          "home_team": "Corea del Sur",
+          "away_team": "Brasil",
+          "home_goals": 2,
+          "away_goals": 5,
+          "winner": "Brasil"
+        },
+        {
+          "home_team": "Canadá",
+          "away_team": "Bélgica",
+          "home_goals": 1,
+          "away_goals": 3,
+          "winner": "Bélgica"
+        },
+        {
+          "home_team": "Canadá",
+          "away_team": "Brasil",
+          "home_goals": 2,
+          "away_goals": 5,
+          "winner": "Brasil"
+        },
+        {
           "home_team": "Bélgica",
-          "away_team": "Corea del Sur",
-          "home_goals": 5,
+          "away_team": "Brasil",
+          "home_goals": 2,
           "away_goals": 1,
           "winner": "Bélgica"
         }
@@ -169,77 +169,77 @@
           "team": "Egipto",
           "pts": 7,
           "gf": 10,
-          "ga": 5,
-          "gd": 5,
+          "ga": 3,
+          "gd": 7,
           "position": 1
         },
         {
-          "team": "Ecuador",
-          "pts": 4,
-          "gf": 13,
-          "ga": 10,
-          "gd": 3,
+          "team": "Costa de Marfil",
+          "pts": 6,
+          "gf": 8,
+          "ga": 7,
+          "gd": 1,
           "position": 2
         },
         {
-          "team": "Escocia",
+          "team": "Curazao",
           "pts": 4,
-          "gf": 7,
-          "ga": 6,
-          "gd": 1,
+          "gf": 4,
+          "ga": 4,
+          "gd": 0,
           "position": 3
         },
         {
-          "team": "Curazao",
-          "pts": 1,
-          "gf": 4,
-          "ga": 13,
-          "gd": -9,
+          "team": "Ecuador",
+          "pts": 0,
+          "gf": 0,
+          "ga": 8,
+          "gd": -8,
           "position": 4
         }
       ],
       "matches": [
         {
-          "home_team": "Ecuador",
-          "away_team": "Escocia",
-          "home_goals": 5,
-          "away_goals": 1,
-          "winner": "Ecuador"
-        },
-        {
-          "home_team": "Ecuador",
-          "away_team": "Curazao",
-          "home_goals": 4,
-          "away_goals": 4,
-          "winner": null
-        },
-        {
-          "home_team": "Ecuador",
+          "home_team": "Costa de Marfil",
           "away_team": "Egipto",
-          "home_goals": 4,
+          "home_goals": 3,
           "away_goals": 5,
           "winner": "Egipto"
         },
         {
-          "home_team": "Escocia",
-          "away_team": "Curazao",
-          "home_goals": 5,
+          "home_team": "Costa de Marfil",
+          "away_team": "Ecuador",
+          "home_goals": 1,
           "away_goals": 0,
-          "winner": "Escocia"
+          "winner": "Costa de Marfil"
         },
         {
-          "home_team": "Escocia",
-          "away_team": "Egipto",
-          "home_goals": 1,
-          "away_goals": 1,
+          "home_team": "Costa de Marfil",
+          "away_team": "Curazao",
+          "home_goals": 4,
+          "away_goals": 2,
+          "winner": "Costa de Marfil"
+        },
+        {
+          "home_team": "Egipto",
+          "away_team": "Ecuador",
+          "home_goals": 5,
+          "away_goals": 0,
+          "winner": "Egipto"
+        },
+        {
+          "home_team": "Egipto",
+          "away_team": "Curazao",
+          "home_goals": 0,
+          "away_goals": 0,
           "winner": null
         },
         {
-          "home_team": "Curazao",
-          "away_team": "Egipto",
+          "home_team": "Ecuador",
+          "away_team": "Curazao",
           "home_goals": 0,
-          "away_goals": 4,
-          "winner": "Egipto"
+          "away_goals": 2,
+          "winner": "Curazao"
         }
       ]
     },
@@ -247,80 +247,80 @@
       "group": "D",
       "standings": [
         {
-          "team": "Inglaterra",
-          "pts": 7,
+          "team": "Estados Unidos",
+          "pts": 6,
           "gf": 11,
-          "ga": 6,
-          "gd": 5,
+          "ga": 8,
+          "gd": 3,
           "position": 1
         },
         {
-          "team": "Ghana",
+          "team": "Haití",
           "pts": 6,
-          "gf": 9,
-          "ga": 7,
+          "gf": 11,
+          "ga": 9,
           "gd": 2,
           "position": 2
         },
         {
-          "team": "Haití",
-          "pts": 4,
-          "gf": 12,
-          "ga": 10,
-          "gd": 2,
+          "team": "Francia",
+          "pts": 3,
+          "gf": 9,
+          "ga": 11,
+          "gd": -2,
           "position": 3
         },
         {
-          "team": "Francia",
-          "pts": 0,
-          "gf": 4,
-          "ga": 13,
-          "gd": -9,
+          "team": "Ghana",
+          "pts": 3,
+          "gf": 7,
+          "ga": 10,
+          "gd": -3,
           "position": 4
         }
       ],
       "matches": [
         {
-          "home_team": "Inglaterra",
+          "home_team": "Ghana",
           "away_team": "Haití",
-          "home_goals": 5,
-          "away_goals": 5,
-          "winner": null
-        },
-        {
-          "home_team": "Inglaterra",
-          "away_team": "Ghana",
-          "home_goals": 3,
-          "away_goals": 0,
-          "winner": "Inglaterra"
-        },
-        {
-          "home_team": "Inglaterra",
-          "away_team": "Francia",
-          "home_goals": 3,
-          "away_goals": 1,
-          "winner": "Inglaterra"
-        },
-        {
-          "home_team": "Haití",
-          "away_team": "Ghana",
           "home_goals": 2,
-          "away_goals": 4,
-          "winner": "Ghana"
-        },
-        {
-          "home_team": "Haití",
-          "away_team": "Francia",
-          "home_goals": 5,
-          "away_goals": 1,
+          "away_goals": 5,
           "winner": "Haití"
         },
         {
           "home_team": "Ghana",
+          "away_team": "Estados Unidos",
+          "home_goals": 1,
+          "away_goals": 4,
+          "winner": "Estados Unidos"
+        },
+        {
+          "home_team": "Ghana",
+          "away_team": "Francia",
+          "home_goals": 4,
+          "away_goals": 1,
+          "winner": "Ghana"
+        },
+        {
+          "home_team": "Haití",
+          "away_team": "Estados Unidos",
+          "home_goals": 4,
+          "away_goals": 2,
+          "winner": "Haití"
+        },
+        {
+          "home_team": "Haití",
+          "away_team": "Francia",
+          "home_goals": 2,
+          "away_goals": 5,
+          "winner": "Francia"
+        },
+        {
+          "home_team": "Estados Unidos",
           "away_team": "Francia",
           "home_goals": 5,
-          "away_goals": 2,
-          "winner": "Ghana"
+          "away_goals": 3,
+          "winner": "Estados Unidos"
         }
       ]
     },
@@ -328,31 +328,193 @@
       "group": "E",
       "standings": [
         {
-          "team": "Irak",
-          "pts": 9,
-          "gf": 6,
-          "ga": 2,
-          "gd": 4,
+          "team": "Jordania",
+          "pts": 7,
+          "gf": 11,
+          "ga": 8,
+          "gd": 3,
           "position": 1
         },
         {
-          "team": "Japón",
+          "team": "Irak",
           "pts": 6,
-          "gf": 9,
-          "ga": 5,
-          "gd": 4,
+          "gf": 10,
+          "ga": 3,
+          "gd": 7,
           "position": 2
         },
         {
-          "team": "Jordania",
-          "pts": 3,
-          "gf": 4,
-          "ga": 8,
+          "team": "Nueva Zelanda",
+          "pts": 2,
+          "gf": 10,
+          "ga": 14,
           "gd": -4,
           "position": 3
         },
         {
-          "team": "Irán",
+          "team": "Inglaterra",
+          "pts": 1,
+          "gf": 9,
+          "ga": 15,
+          "gd": -6,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Nueva Zelanda",
+          "away_team": "Jordania",
+          "home_goals": 4,
+          "away_goals": 4,
+          "winner": null
+        },
+        {
+          "home_team": "Nueva Zelanda",
+          "away_team": "Irak",
+          "home_goals": 1,
+          "away_goals": 5,
+          "winner": "Irak"
+        },
+        {
+          "home_team": "Nueva Zelanda",
+          "away_team": "Inglaterra",
+          "home_goals": 5,
+          "away_goals": 5,
+          "winner": null
+        },
+        {
+          "home_team": "Jordania",
+          "away_team": "Irak",
+          "home_goals": 2,
+          "away_goals": 0,
+          "winner": "Jordania"
+        },
+        {
+          "home_team": "Jordania",
+          "away_team": "Inglaterra",
+          "home_goals": 5,
+          "away_goals": 4,
+          "winner": "Jordania"
+        },
+        {
+          "home_team": "Irak",
+          "away_team": "Inglaterra",
+          "home_goals": 5,
+          "away_goals": 0,
+          "winner": "Irak"
+        }
+      ]
+    },
+    {
+      "group": "F",
+      "standings": [
+        {
+          "team": "Portugal",
+          "pts": 6,
+          "gf": 10,
+          "ga": 7,
+          "gd": 3,
+          "position": 1
+        },
+        {
+          "team": "Panamá",
+          "pts": 4,
+          "gf": 8,
+          "ga": 8,
+          "gd": 0,
+          "position": 2
+        },
+        {
+          "team": "Países Bajos",
+          "pts": 4,
+          "gf": 8,
+          "ga": 9,
+          "gd": -1,
+          "position": 3
+        },
+        {
+          "team": "Paraguay",
+          "pts": 3,
+          "gf": 7,
+          "ga": 9,
+          "gd": -2,
+          "position": 4
+        }
+      ],
+      "matches": [
+        {
+          "home_team": "Portugal",
+          "away_team": "Paraguay",
+          "home_goals": 5,
+          "away_goals": 3,
+          "winner": "Portugal"
+        },
+        {
+          "home_team": "Portugal",
+          "away_team": "Panamá",
+          "home_goals": 0,
+          "away_goals": 2,
+          "winner": "Panamá"
+        },
+        {
+          "home_team": "Portugal",
+          "away_team": "Países Bajos",
+          "home_goals": 5,
+          "away_goals": 2,
+          "winner": "Portugal"
+        },
+        {
+          "home_team": "Paraguay",
+          "away_team": "Panamá",
+          "home_goals": 4,
+          "away_goals": 2,
+          "winner": "Paraguay"
+        },
+        {
+          "home_team": "Paraguay",
+          "away_team": "Países Bajos",
+          "home_goals": 0,
+          "away_goals": 2,
+          "winner": "Países Bajos"
+        },
+        {
+          "home_team": "Panamá",
+          "away_team": "Países Bajos",
+          "home_goals": 4,
+          "away_goals": 4,
+          "winner": null
+        }
+      ]
+    },
+    {
+      "group": "G",
+      "standings": [
+        {
+          "team": "Sudáfrica",
+          "pts": 9,
+          "gf": 11,
+          "ga": 7,
+          "gd": 4,
+          "position": 1
+        },
+        {
+          "team": "República Checa",
+          "pts": 6,
+          "gf": 11,
+          "ga": 5,
+          "gd": 6,
+          "position": 2
+        },
+        {
+          "team": "Suecia",
+          "pts": 3,
+          "gf": 3,
+          "ga": 9,
+          "gd": -6,
+          "position": 3
+        },
+        {
+          "team": "República Democrática del Congo",
           "pts": 0,
           "gf": 3,
           "ga": 7,
@@ -362,159 +524,78 @@
       ],
       "matches": [
         {
-          "home_team": "Irak",
-          "away_team": "Jordania",
+          "home_team": "Sudáfrica",
+          "away_team": "República Democrática del Congo",
           "home_goals": 3,
-          "away_goals": 1,
-          "winner": "Irak"
-        },
-        {
-          "home_team": "Irak",
-          "away_team": "Irán",
-          "home_goals": 1,
-          "away_goals": 0,
-          "winner": "Irak"
-        },
-        {
-          "home_team": "Irak",
-          "away_team": "Japón",
-          "home_goals": 2,
-          "away_goals": 1,
-          "winner": "Irak"
-        },
-        {
-          "home_team": "Jordania",
-          "away_team": "Irán",
-          "home_goals": 2,
-          "away_goals": 1,
-          "winner": "Jordania"
-        },
-        {
-          "home_team": "Jordania",
-          "away_team": "Japón",
-          "home_goals": 1,
-          "away_goals": 4,
-          "winner": "Japón"
-        },
-        {
-          "home_team": "Irán",
-          "away_team": "Japón",
-          "home_goals": 2,
-          "away_goals": 4,
-          "winner": "Japón"
-        }
-      ]
-    },
-    {
-      "group": "F",
-      "standings": [
-        {
-          "team": "Paraguay",
-          "pts": 5,
-          "gf": 11,
-          "ga": 10,
-          "gd": 1,
-          "position": 1
-        },
-        {
-          "team": "Panamá",
-          "pts": 5,
-          "gf": 10,
-          "ga": 9,
-          "gd": 1,
-          "position": 2
-        },
-        {
-          "team": "Nueva Zelanda",
-          "pts": 3,
-          "gf": 11,
-          "ga": 11,
-          "gd": 0,
-          "position": 3
-        },
-        {
-          "team": "Países Bajos",
-          "pts": 2,
-          "gf": 4,
-          "ga": 6,
-          "gd": -2,
-          "position": 4
-        }
-      ],
-      "matches": [
-        {
-          "home_team": "Nueva Zelanda",
-          "away_team": "Países Bajos",
-          "home_goals": 4,
           "away_goals": 2,
-          "winner": "Nueva Zelanda"
+          "winner": "Sudáfrica"
         },
         {
-          "home_team": "Nueva Zelanda",
-          "away_team": "Paraguay",
-          "home_goals": 3,
-          "away_goals": 4,
-          "winner": "Paraguay"
-        },
-        {
-          "home_team": "Nueva Zelanda",
-          "away_team": "Panamá",
-          "home_goals": 4,
-          "away_goals": 5,
-          "winner": "Panamá"
-        },
-        {
-          "home_team": "Países Bajos",
-          "away_team": "Paraguay",
-          "home_goals": 2,
-          "away_goals": 2,
-          "winner": null
-        },
-        {
-          "home_team": "Países Bajos",
-          "away_team": "Panamá",
-          "home_goals": 0,
-          "away_goals": 0,
-          "winner": null
-        },
-        {
-          "home_team": "Paraguay",
-          "away_team": "Panamá",
+          "home_team": "Sudáfrica",
+          "away_team": "República Checa",
           "home_goals": 5,
-          "away_goals": 5,
-          "winner": null
+          "away_goals": 4,
+          "winner": "Sudáfrica"
+        },
+        {
+          "home_team": "Sudáfrica",
+          "away_team": "Suecia",
+          "home_goals": 3,
+          "away_goals": 1,
+          "winner": "Sudáfrica"
+        },
+        {
+          "home_team": "República Democrática del Congo",
+          "away_team": "República Checa",
+          "home_goals": 0,
+          "away_goals": 2,
+          "winner": "República Checa"
+        },
+        {
+          "home_team": "República Democrática del Congo",
+          "away_team": "Suecia",
+          "home_goals": 1,
+          "away_goals": 2,
+          "winner": "Suecia"
+        },
+        {
+          "home_team": "República Checa",
+          "away_team": "Suecia",
+          "home_goals": 5,
+          "away_goals": 0,
+          "winner": "República Checa"
         }
       ]
     },
     {
-      "group": "G",
+      "group": "H",
       "standings": [
         {
-          "team": "Qatar",
+          "team": "Suiza",
           "pts": 9,
-          "gf": 13,
-          "ga": 5,
-          "gd": 8,
+          "gf": 10,
+          "ga": 3,
+          "gd": 7,
           "position": 1
         },
         {
-          "team": "Senegal",
+          "team": "Uzbekistán",
           "pts": 6,
-          "gf": 6,
-          "ga": 5,
-          "gd": 1,
+          "gf": 8,
+          "ga": 4,
+          "gd": 4,
           "position": 2
         },
         {
-          "team": "Portugal",
+          "team": "Túnez",
           "pts": 3,
-          "gf": 5,
+          "gf": 3,
           "ga": 9,
-          "gd": -4,
+          "gd": -6,
           "position": 3
         },
         {
-          "team": "República Checa",
+          "team": "Turquía",
           "pts": 0,
           "gf": 5,
           "ga": 10,
@@ -524,248 +605,167 @@
       ],
       "matches": [
         {
-          "home_team": "Qatar",
-          "away_team": "República Checa",
-          "home_goals": 4,
-          "away_goals": 2,
-          "winner": "Qatar"
-        },
-        {
-          "home_team": "Qatar",
-          "away_team": "Portugal",
-          "home_goals": 4,
-          "away_goals": 0,
-          "winner": "Qatar"
-        },
-        {
-          "home_team": "Qatar",
-          "away_team": "Senegal",
-          "home_goals": 5,
-          "away_goals": 3,
-          "winner": "Qatar"
-        },
-        {
-          "home_team": "República Checa",
-          "away_team": "Portugal",
-          "home_goals": 3,
-          "away_goals": 5,
-          "winner": "Portugal"
-        },
-        {
-          "home_team": "República Checa",
-          "away_team": "Senegal",
-          "home_goals": 0,
-          "away_goals": 1,
-          "winner": "Senegal"
-        },
-        {
-          "home_team": "Portugal",
-          "away_team": "Senegal",
-          "home_goals": 0,
-          "away_goals": 2,
-          "winner": "Senegal"
-        }
-      ]
-    },
-    {
-      "group": "H",
-      "standings": [
-        {
-          "team": "Túnez",
-          "pts": 6,
-          "gf": 11,
-          "ga": 4,
-          "gd": 7,
-          "position": 1
-        },
-        {
-          "team": "Suiza",
-          "pts": 6,
-          "gf": 6,
-          "ga": 5,
-          "gd": 1,
-          "position": 2
-        },
-        {
-          "team": "Uzbekistán",
-          "pts": 3,
-          "gf": 5,
-          "ga": 8,
-          "gd": -3,
-          "position": 3
-        },
-        {
-          "team": "Turquía",
-          "pts": 3,
-          "gf": 6,
-          "ga": 11,
-          "gd": -5,
-          "position": 4
-        }
-      ],
-      "matches": [
-        {
-          "home_team": "Suiza",
+          "home_team": "Túnez",
           "away_team": "Uzbekistán",
-          "home_goals": 3,
-          "away_goals": 0,
-          "winner": "Suiza"
-        },
-        {
-          "home_team": "Suiza",
-          "away_team": "Túnez",
-          "home_goals": 0,
+          "home_goals": 1,
           "away_goals": 5,
-          "winner": "Túnez"
-        },
-        {
-          "home_team": "Suiza",
-          "away_team": "Turquía",
-          "home_goals": 3,
-          "away_goals": 0,
-          "winner": "Suiza"
-        },
-        {
-          "home_team": "Uzbekistán",
-          "away_team": "Túnez",
-          "home_goals": 0,
-          "away_goals": 3,
-          "winner": "Túnez"
-        },
-        {
-          "home_team": "Uzbekistán",
-          "away_team": "Turquía",
-          "home_goals": 5,
-          "away_goals": 2,
           "winner": "Uzbekistán"
         },
         {
           "home_team": "Túnez",
+          "away_team": "Suiza",
+          "home_goals": 0,
+          "away_goals": 3,
+          "winner": "Suiza"
+        },
+        {
+          "home_team": "Túnez",
+          "away_team": "Turquía",
+          "home_goals": 2,
+          "away_goals": 1,
+          "winner": "Túnez"
+        },
+        {
+          "home_team": "Uzbekistán",
+          "away_team": "Suiza",
+          "home_goals": 0,
+          "away_goals": 2,
+          "winner": "Suiza"
+        },
+        {
+          "home_team": "Uzbekistán",
           "away_team": "Turquía",
           "home_goals": 3,
-          "away_goals": 4,
-          "winner": "Turquía"
+          "away_goals": 1,
+          "winner": "Uzbekistán"
+        },
+        {
+          "home_team": "Suiza",
+          "away_team": "Turquía",
+          "home_goals": 5,
+          "away_goals": 3,
+          "winner": "Suiza"
         }
       ]
     }
   ],
   "round_of_16": [
     {
-      "home_team": "Arabia Saudita",
+      "home_team": "Alemania",
       "away_team": "Bélgica",
-      "home_goals": 0,
-      "away_goals": 3,
+      "home_goals": 1,
+      "away_goals": 2,
       "winner": "Bélgica"
     },
     {
       "home_team": "Egipto",
-      "away_team": "Ghana",
-      "home_goals": 2,
-      "away_goals": 2,
-      "winner": "Ghana"
+      "away_team": "Haití",
+      "home_goals": 1,
+      "away_goals": 0,
+      "winner": "Egipto"
     },
     {
-      "home_team": "Irak",
+      "home_team": "Jordania",
       "away_team": "Panamá",
       "home_goals": 5,
-      "away_goals": 0,
-      "winner": "Irak"
-    },
-    {
-      "home_team": "Qatar",
-      "away_team": "Suiza",
-      "home_goals": 4,
-      "away_goals": 2,
-      "winner": "Qatar"
-    },
-    {
-      "home_team": "Bosnia y Herzegovina",
-      "away_team": "Alemania",
-      "home_goals": 1,
-      "away_goals": 5,
-      "winner": "Alemania"
-    },
-    {
-      "home_team": "Inglaterra",
-      "away_team": "Ecuador",
-      "home_goals": 4,
-      "away_goals": 3,
-      "winner": "Inglaterra"
-    },
-    {
-      "home_team": "Paraguay",
-      "away_team": "Japón",
-      "home_goals": 5,
-      "away_goals": 0,
-      "winner": "Paraguay"
-    },
-    {
-      "home_team": "Túnez",
-      "away_team": "Senegal",
-      "home_goals": 3,
       "away_goals": 1,
-      "winner": "Túnez"
+      "winner": "Jordania"
+    },
+    {
+      "home_team": "Sudáfrica",
+      "away_team": "Uzbekistán",
+      "home_goals": 1,
+      "away_goals": 0,
+      "winner": "Sudáfrica"
+    },
+    {
+      "home_team": "Brasil",
+      "away_team": "Argelia",
+      "home_goals": 2,
+      "away_goals": 5,
+      "winner": "Argelia"
+    },
+    {
+      "home_team": "Estados Unidos",
+      "away_team": "Costa de Marfil",
+      "home_goals": 0,
+      "away_goals": 4,
+      "winner": "Costa de Marfil"
+    },
+    {
+      "home_team": "Portugal",
+      "away_team": "Irak",
+      "home_goals": 3,
+      "away_goals": 0,
+      "winner": "Portugal"
+    },
+    {
+      "home_team": "Suiza",
+      "away_team": "República Checa",
+      "home_goals": 0,
+      "away_goals": 1,
+      "winner": "República Checa"
     }
   ],
   "quarterfinals": [
     {
       "home_team": "Bélgica",
-      "away_team": "Ghana",
-      "home_goals": 1,
+      "away_team": "Egipto",
+      "home_goals": 0,
       "away_goals": 4,
-      "winner": "Ghana"
+      "winner": "Egipto"
     },
     {
-      "home_team": "Irak",
-      "away_team": "Qatar",
+      "home_team": "Jordania",
+      "away_team": "Sudáfrica",
       "home_goals": 4,
+      "away_goals": 0,
+      "winner": "Jordania"
+    },
+    {
+      "home_team": "Argelia",
+      "away_team": "Costa de Marfil",
+      "home_goals": 0,
       "away_goals": 3,
-      "winner": "Irak"
+      "winner": "Costa de Marfil"
     },
     {
-      "home_team": "Alemania",
-      "away_team": "Inglaterra",
-      "home_goals": 2,
-      "away_goals": 2,
-      "winner": "Alemania"
-    },
-    {
-      "home_team": "Paraguay",
-      "away_team": "Túnez",
-      "home_goals": 5,
+      "home_team": "Portugal",
+      "away_team": "República Checa",
+      "home_goals": 4,
       "away_goals": 5,
-      "winner": "Paraguay"
+      "winner": "República Checa"
     }
   ],
   "semifinals": [
     {
-      "home_team": "Ghana",
-      "away_team": "Irak",
+      "home_team": "Egipto",
+      "away_team": "Jordania",
       "home_goals": 4,
-      "away_goals": 5,
-      "winner": "Irak"
+      "away_goals": 2,
+      "winner": "Egipto"
     },
     {
-      "home_team": "Alemania",
-      "away_team": "Paraguay",
-      "home_goals": 1,
+      "home_team": "Costa de Marfil",
+      "away_team": "República Checa",
+      "home_goals": 4,
       "away_goals": 1,
-      "winner": "Alemania"
+      "winner": "Costa de Marfil"
     }
   ],
   "third_place": {
-    "home_team": "Ghana",
-    "away_team": "Paraguay",
-    "home_goals": 1,
-    "away_goals": 2,
-    "winner": "Paraguay"
+    "home_team": "Jordania",
+    "away_team": "República Checa",
+    "home_goals": 3,
+    "away_goals": 4,
+    "winner": "República Checa"
   },
   "final": {
-    "home_team": "Irak",
-    "away_team": "Alemania",
-    "home_goals": 5,
-    "away_goals": 3,
-    "winner": "Irak"
+    "home_team": "Egipto",
+    "away_team": "Costa de Marfil",
+    "home_goals": 1,
+    "away_goals": 0,
+    "winner": "Egipto"
   },
-  "champion": "Irak"
+  "champion": "Egipto"
 }

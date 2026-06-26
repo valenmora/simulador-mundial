@@ -125,7 +125,7 @@ def test_simulator_run_teams_have_players(client: TestClient):
     assert len(teams) == 32
     for team in teams:
         player_res = client.get(f"/players/?team_id={team['id']}")
-        assert len(player_res.json()) >= 3
+        assert len(player_res.json()) >= 2
 
 
 def test_simulator_run_teams_assigned_groups(client: TestClient):
@@ -285,7 +285,7 @@ def test_simulator_run_exact_32_teams_no_players(client: TestClient):
     assert res.status_code == 200
     for team in client.get("/teams/").json():
         player_res = client.get(f"/players/?team_id={team['id']}")
-        assert len(player_res.json()) >= 3
+        assert len(player_res.json()) >= 2
 
 
 def test_simulator_run_some_teams_have_players(client: TestClient):
@@ -299,7 +299,7 @@ def test_simulator_run_some_teams_have_players(client: TestClient):
     arg_players = client.get(f"/players/?team_id={t1['id']}").json()
     bra_players = client.get(f"/players/?team_id={t2['id']}").json()
     assert len(arg_players) >= 5
-    assert len(bra_players) >= 3
+    assert len(bra_players) >= 2
 
 
 def test_simulator_run_all_match_teams_exist_in_db(client: TestClient):
