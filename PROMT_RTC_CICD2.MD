@@ -18,23 +18,27 @@ Stack del proyecto:
 El pipeline del Simulador Mundial 2026 falló. Este es el log completo del job:
 
 --- LOG DE GITHUB ACTIONS ---
-[PEGAR AQUÍ EL LOG COMPLETO DEL JOB QUE FALLÓ]
---- FIN DEL LOG ---
+Parse coverage .xml and validate
+Run import xml.etree.ElementTree as ET
+Coverage: 77.83%
+Quality Gate FAIL: coverage 77.83% < 80%
+Error: Process completed with exit code 1.
 
 Respondé con exactamente esta estructura:
 
 ## Job que falló
-[nombre del job — ①lint / ②tests / ③quality-gate / ④simulate / ⑤deploy]
+
+🔍 Quality Gate >= 80%
 
 ## Step exacto
-[nombre del step dentro del job]
+Parse coverage .xml and validate
 
 ## Causa raíz
-[1-2 oraciones. Técnico, sin rodeos.]
+Run import xml.etree.ElementTree as ET
+Coverage: 77.83%
+Quality Gate FAIL: coverage 77.83% < 80%
+Error: Process completed with exit code 1.
 
-## Fix mínimo
-Archivo: [nombre del archivo o configuración]
-Cambio: [qué modificar y dónde]
 
 ## Verificación local antes del próximo push
 [comando PowerShell para reproducir y confirmar el fix]

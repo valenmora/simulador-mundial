@@ -1,11 +1,11 @@
 {
-  "champion": "Francia",
+  "champion": "Irak",
   "top_scorer": {
-    "player_name": "Aiden Cafu Francia-2",
-    "team_name": "Francia",
-    "goals": 17
+    "player_name": "Harry Kane",
+    "team_name": "Inglaterra",
+    "goals": 10
   },
-  "avg_goals_per_match": 5.36,
-  "total_goals": 343,
+  "avg_goals_per_match": 5.3,
+  "total_goals": 339,
   "total_matches": 64
 }

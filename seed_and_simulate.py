@@ -37,9 +37,16 @@ def fetch_teams(client):
     return []
 
 
+def fetch_players(client):
+    res = client.get("/players/")
+    if res.status_code == 200:
+        return res.json()
+    return []
+
+
 def save_json(data, filename):
     path = DATA_DIR / filename
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
     return path
 
 
@@ -51,7 +58,7 @@ def copy_images():
         print(f"Images copied: {len(list(STATIC_IMAGES.iterdir()))}")
 
 
-def build_html(simulation, dashboard, teams):
+def build_html(simulation, dashboard, teams, players):
     champion = simulation.get("champion", "Desconocido")
     groups = simulation.get("groups", [])
     bracket_rounds = [
@@ -458,6 +465,13 @@ def build_html(simulation, dashboard, teams):
 
     <hr class="divider">
 
+    <div id="squadsSection">
+      <h3 class="section-title">Plantillas</h3>
+      <div id="squadsContainer">{render_squads(teams, players)}</div>
+    </div>
+
+    <hr class="divider">
+
     <h2 class="section-title">Resultados del Torneo</h2>
 
     <div class="stats-bar">
@@ -564,38 +578,88 @@ def render_teams(teams):
     return html
 
 
+def render_squads(teams, players):
+    if not teams or not players:
+        return '<div class="alert alert-info">No hay datos de plantillas.</div>'
+    team_map = {t["id"]: t["name"] for t in teams}
+    squad_groups = {}
+    for p in players:
+        tid = p["team_id"]
+        squad_groups.setdefault(tid, []).append(p)
+
+    def position_badge(pos):
+        colors = {"GK": "#dc3545", "DF": "#0d6efd", "MF": "#198754", "FW": "#ffc107"}
+        c = colors.get(pos, "#6c757d")
+        return f'<span style="background:{c};color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">{pos}</span>'
+
+    html = '<div class="row g-3">'
+    for tid in sorted(squad_groups):
+        tname = team_map.get(tid, f"Equipo {tid}")
+        player_list = squad_groups[tid]
+        rows = "".join(
+            f'<tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">{p["name"]}</td><td style="padding:0.25rem 0.5rem;">{position_badge(p["position"])}</td></tr>'
+            for p in player_list
+        )
+        html += f'''
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">{tname}</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody>{rows}</tbody>
+            </table>
+          </div>
+        </div>'''
+    html += "</div>"
+    return html
+
+
 def main():
     print("=" * 60)
     print("Simulador Mundial 2026 - Generacion de sitio estatico")
     print("=" * 60)
 
+    worldcup_db = BASE_DIR / "worldcup.db"
+    if worldcup_db.exists():
+        worldcup_db.unlink()
+        print("  Base de datos local limpiada")
+
     ensure_dirs()
 
     client = TestClient(app)
 
-    print("\n[1/4] Ejecutando simulacion...")
+    print("\n[1/5] Ejecutando simulacion...")
     simulation = run_simulation(client)
     champion = simulation.get("champion", "Desconocido")
     print(f"  Simulacion completada. Campeon: {champion}")
 
-    print("\n[2/4] Obteniendo dashboard y equipos...")
+    print("\n[2/5] Obteniendo dashboard, equipos y jugadores...")
     dashboard = fetch_dashboard(client)
     teams = fetch_teams(client)
+    players = fetch_players(client)
     print(f"  Dashboard: {len(dashboard)} metricas")
     print(f"  Equipos: {len(teams)}")
+    print(f"  Jugadores: {len(players)}")
 
-    print("\n[3/4] Guardando archivos...")
+    print("\n[3/5] Guardando archivos...")
     save_json(simulation, "simulation.json")
     save_json(dashboard, "dashboard.json")
     save_json(teams, "teams.json")
+    save_json(players, "players.json")
     copy_images()
     print("  JSON guardados en dist/data/")
     print("  Imagenes copiadas a dist/images/")
 
-    print("\n[4/4] Generando HTML estatico...")
-    html, champion = build_html(simulation, dashboard, teams)
+    print("\n[4/5] Generando HTML estatico...")
+    html, champion = build_html(simulation, dashboard, teams, players)
     (DIST_DIR / "index.html").write_text(html, encoding="utf-8")
     print("  dist/index.html generado")
+
+    print("\n[5/5] Verificando archivos...")
+    files = ["index.html", "data/simulation.json", "data/dashboard.json", "data/teams.json", "data/players.json"]
+    for f in files:
+        p = DIST_DIR / f
+        print(f"  {'[OK]' if p.exists() else '[MISSING]'} {f}")
 
     print("\n" + "=" * 60)
     print(f"  CAMPEON DEL MUNDO 2026: {champion}")
@@ -605,6 +669,7 @@ def main():
     print("  dist/data/simulation.json")
     print("  dist/data/dashboard.json")
     print("  dist/data/teams.json")
+    print("  dist/data/players.json")
     print("  dist/images/")
 
 

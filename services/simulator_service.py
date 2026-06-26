@@ -39,28 +39,71 @@ class SimulatorService:
         from schemas.team import TeamCreate
         from schemas.player import PlayerCreate
 
-        COUNTRIES = [
-            "Argentina", "Brasil", "Francia", "Inglaterra", "Alemania", "España",
-            "Portugal", "Países Bajos", "Bélgica", "Croacia", "Italia", "Uruguay",
-            "México", "Estados Unidos", "Colombia", "Chile",
-            "Japón", "Corea del Sur", "Arabia Saudita", "Irán", "Australia",
-            "Camerún", "Ghana", "Marruecos", "Senegal", "Túnez",
-            "Canadá", "Ecuador", "Perú", "Paraguay", "Suiza", "Dinamarca",
-        ]
+        COUNTRIES = {
+            "Argentina":                       {"code": "ARG", "players": [("Lionel Messi", "FW"), ("Julián Álvarez", "FW")]},
+            "Argelia":                         {"code": "ALG", "players": [("Riyad Mahrez", "FW"), ("Ismaël Bennacer", "MF")]},
+            "Australia":                       {"code": "AUS", "players": [("Mathew Ryan", "GK"), ("Jackson Irvine", "MF")]},
+            "Austria":                         {"code": "AUT", "players": [("David Alaba", "DF"), ("Marcel Sabitzer", "MF")]},
+            "Bélgica":                         {"code": "BEL", "players": [("Kevin De Bruyne", "MF"), ("Jérémy Doku", "FW")]},
+            "Bosnia y Herzegovina":             {"code": "BIH", "players": [("Edin Džeko", "FW"), ("Ermedin Demirović", "FW")]},
+            "Brasil":                          {"code": "BRA", "players": [("Vinícius Júnior", "FW"), ("Rodrygo", "FW")]},
+            "Canadá":                          {"code": "CAN", "players": [("Alphonso Davies", "DF"), ("Jonathan David", "FW")]},
+            "Cabo Verde":                      {"code": "CPV", "players": [("Ryan Mendes", "FW"), ("Jamiro Monteiro", "MF")]},
+            "Colombia":                        {"code": "COL", "players": [("Luis Díaz", "FW"), ("James Rodríguez", "MF")]},
+            "Croacia":                         {"code": "CRO", "players": [("Luka Modrić", "MF"), ("Joško Gvardiol", "DF")]},
+            "Curazao":                         {"code": "CUW", "players": [("Leandro Bacuna", "MF"), ("Eloy Room", "GK")]},
+            "República Checa":                 {"code": "CZE", "players": [("Tomáš Souček", "MF"), ("Patrik Schick", "FW")]},
+            "Ecuador":                         {"code": "ECU", "players": [("Moisés Caicedo", "MF"), ("Piero Hincapié", "DF")]},
+            "Egipto":                          {"code": "EGY", "players": [("Mohamed Salah", "FW"), ("Omar Marmoush", "FW")]},
+            "Inglaterra":                      {"code": "ENG", "players": [("Harry Kane", "FW"), ("Jude Bellingham", "MF")]},
+            "Francia":                         {"code": "FRA", "players": [("Kylian Mbappé", "FW"), ("Ousmane Dembélé", "FW")]},
+            "Alemania":                        {"code": "GER", "players": [("Jamal Musiala", "MF"), ("Florian Wirtz", "MF")]},
+            "Ghana":                           {"code": "GHA", "players": [("Mohammed Kudus", "FW"), ("Thomas Partey", "MF")]},
+            "Haití":                           {"code": "HAI", "players": [("Duckens Nazon", "FW"), ("Danley Jean Jacques", "MF")]},
+            "Irán":                            {"code": "IRN", "players": [("Mehdi Taremi", "FW"), ("Sardar Azmoun", "FW")]},
+            "Irak":                            {"code": "IRQ", "players": [("Aymen Hussein", "FW"), ("Ibrahim Bayesh", "MF")]},
+            "Costa de Marfil":                 {"code": "CIV", "players": [("Sébastien Haller", "FW"), ("Simon Adingra", "FW")]},
+            "Japón":                           {"code": "JPN", "players": [("Takefusa Kubo", "FW"), ("Kaoru Mitoma", "FW")]},
+            "Jordania":                        {"code": "JOR", "players": [("Musa Al-Taamari", "FW"), ("Yazan Al-Naimat", "FW")]},
+            "México":                          {"code": "MEX", "players": [("Santiago Giménez", "FW"), ("Edson Álvarez", "MF")]},
+            "Marruecos":                       {"code": "MAR", "players": [("Achraf Hakimi", "DF"), ("Youssef En-Nesyri", "FW")]},
+            "Países Bajos":                    {"code": "NED", "players": [("Virgil van Dijk", "DF"), ("Cody Gakpo", "FW")]},
+            "Nueva Zelanda":                   {"code": "NZL", "players": [("Chris Wood", "FW"), ("Liberato Cacace", "DF")]},
+            "Noruega":                         {"code": "NOR", "players": [("Erling Haaland", "FW"), ("Martin Ødegaard", "MF")]},
+            "Panamá":                          {"code": "PAN", "players": [("Adalberto Carrasquilla", "MF"), ("José Fajardo", "FW")]},
+            "Paraguay":                        {"code": "PAR", "players": [("Miguel Almirón", "FW"), ("Julio Enciso", "FW")]},
+            "Portugal":                        {"code": "POR", "players": [("Cristiano Ronaldo", "FW"), ("Bruno Fernandes", "MF")]},
+            "Qatar":                           {"code": "QAT", "players": [("Akram Afif", "FW"), ("Almoez Ali", "FW")]},
+            "Arabia Saudita":                  {"code": "KSA", "players": [("Salem Al-Dawsari", "FW"), ("Firas Al-Buraikan", "FW")]},
+            "Escocia":                         {"code": "SCO", "players": [("Andrew Robertson", "DF"), ("Scott McTominay", "MF")]},
+            "Senegal":                         {"code": "SEN", "players": [("Sadio Mané", "FW"), ("Kalidou Koulibaly", "DF")]},
+            "Sudáfrica":                       {"code": "RSA", "players": [("Percy Tau", "FW"), ("Teboho Mokoena", "MF")]},
+            "Corea del Sur":                   {"code": "KOR", "players": [("Son Heung-min", "FW"), ("Lee Kang-in", "MF")]},
+            "España":                          {"code": "ESP", "players": [("Lamine Yamal", "FW"), ("Pedri", "MF")]},
+            "Suecia":                          {"code": "SWE", "players": [("Alexander Isak", "FW"), ("Anthony Elanga", "FW")]},
+            "Suiza":                           {"code": "SUI", "players": [("Granit Xhaka", "MF"), ("Manuel Akanji", "DF")]},
+            "Túnez":                           {"code": "TUN", "players": [("Youssef Msakni", "FW"), ("Ellyes Skhiri", "MF")]},
+            "Turquía":                         {"code": "TUR", "players": [("Arda Güler", "MF"), ("Hakan Çalhanoğlu", "MF")]},
+            "Estados Unidos":                  {"code": "USA", "players": [("Christian Pulisic", "FW"), ("Weston McKennie", "MF")]},
+            "Uruguay":                         {"code": "URU", "players": [("Federico Valverde", "MF"), ("Darwin Núñez", "FW")]},
+            "Uzbekistán":                      {"code": "UZB", "players": [("Abdukodir Khusanov", "DF"), ("Eldor Shomurodov", "FW")]},
+            "República Democrática del Congo":  {"code": "COD", "players": [("Chancel Mbemba", "DF"), ("Yoane Wissa", "FW")]},
+        }
 
-        existing_count = self.team_repo.count()
-        for idx in range(existing_count, 32):
-            country = COUNTRIES[idx]
-            code = country[:3].upper()
-            team = self.team_repo.create(TeamCreate(name=country, code=code))
-            for player_index in range(2):
-                fname = random.choice(FIRST_NAMES)
-                lname = random.choice(POSITION_POOL[random.choice(POSITIONS)])
-                self.player_repo.create(PlayerCreate(
-                    name=f"{fname} {lname} {country}-{player_index + 1}",
-                    position=random.choice(POSITIONS),
-                    team_id=team.id,
-                ))
+        existing = self.team_repo.get_all()
+        existing_names = {t.name for t in existing}
+        needed = 32 - len(existing)
+
+        if needed <= 0:
+            return
+
+        pool = [c for c in COUNTRIES if c not in existing_names]
+        selected = random.sample(pool, min(needed, len(pool)))
+        for country in selected:
+            info = COUNTRIES[country]
+            team = self.team_repo.create(TeamCreate(name=country, code=info["code"]))
+            for player_name, position in info["players"]:
+                self.player_repo.create(PlayerCreate(name=player_name, position=position, team_id=team.id))
 
     def _assign_groups(self):
         teams = self.team_repo.get_all()
