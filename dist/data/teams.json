@@ -1,226 +1,226 @@
 [
   {
     "id": 1,
-    "name": "Corea del Sur",
-    "code": "KOR",
+    "name": "Bélgica",
+    "code": "BEL",
     "group_name": "B",
-    "created_at": "2026-06-26T18:04:04"
+    "created_at": "2026-06-26T18:15:21"
   },
   {
     "id": 2,
-    "name": "Costa de Marfil",
-    "code": "CIV",
-    "group_name": "C",
-    "created_at": "2026-06-26T18:04:04"
+    "name": "Panamá",
+    "code": "PAN",
+    "group_name": "G",
+    "created_at": "2026-06-26T18:15:21"
   },
   {
     "id": 3,
-    "name": "Portugal",
-    "code": "POR",
+    "name": "Noruega",
+    "code": "NOR",
     "group_name": "F",
-    "created_at": "2026-06-26T18:04:04"
+    "created_at": "2026-06-26T18:15:21"
   },
   {
     "id": 4,
     "name": "Nueva Zelanda",
     "code": "NZL",
-    "group_name": "E",
-    "created_at": "2026-06-26T18:04:04"
+    "group_name": "F",
+    "created_at": "2026-06-26T18:15:21"
   },
   {
     "id": 5,
-    "name": "Jordania",
-    "code": "JOR",
-    "group_name": "E",
-    "created_at": "2026-06-26T18:04:04"
+    "name": "Costa de Marfil",
+    "code": "CIV",
+    "group_name": "C",
+    "created_at": "2026-06-26T18:15:21"
   },
   {
     "id": 6,
-    "name": "Paraguay",
-    "code": "PAR",
+    "name": "Japón",
+    "code": "JPN",
     "group_name": "F",
-    "created_at": "2026-06-26T18:04:05"
+    "created_at": "2026-06-26T18:15:21"
   },
   {
     "id": 7,
-    "name": "Canadá",
-    "code": "CAN",
-    "group_name": "B",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 8,
     "name": "Alemania",
     "code": "GER",
     "group_name": "A",
-    "created_at": "2026-06-26T18:04:05"
+    "created_at": "2026-06-26T18:15:21"
   },
   {
-    "id": 9,
-    "name": "Bélgica",
-    "code": "BEL",
-    "group_name": "B",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 10,
-    "name": "Panamá",
-    "code": "PAN",
-    "group_name": "F",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 11,
-    "name": "Túnez",
-    "code": "TUN",
-    "group_name": "H",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 12,
-    "name": "Ghana",
-    "code": "GHA",
-    "group_name": "D",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 13,
-    "name": "Argentina",
-    "code": "ARG",
-    "group_name": "A",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 14,
-    "name": "Irak",
-    "code": "IRQ",
-    "group_name": "E",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 15,
-    "name": "Sudáfrica",
-    "code": "RSA",
-    "group_name": "G",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 16,
-    "name": "Uzbekistán",
-    "code": "UZB",
-    "group_name": "H",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 17,
-    "name": "Haití",
-    "code": "HAI",
-    "group_name": "D",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 18,
-    "name": "Bosnia y Herzegovina",
-    "code": "BIH",
-    "group_name": "A",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 19,
-    "name": "Egipto",
-    "code": "EGY",
-    "group_name": "C",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 20,
-    "name": "Inglaterra",
-    "code": "ENG",
-    "group_name": "E",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 21,
-    "name": "Brasil",
-    "code": "BRA",
-    "group_name": "B",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 22,
-    "name": "Países Bajos",
-    "code": "NED",
-    "group_name": "F",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 23,
-    "name": "Argelia",
-    "code": "ALG",
-    "group_name": "A",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 24,
+    "id": 8,
     "name": "Estados Unidos",
     "code": "USA",
     "group_name": "D",
-    "created_at": "2026-06-26T18:04:05"
+    "created_at": "2026-06-26T18:15:21"
   },
   {
-    "id": 25,
-    "name": "Francia",
-    "code": "FRA",
-    "group_name": "D",
-    "created_at": "2026-06-26T18:04:05"
+    "id": 9,
+    "name": "Australia",
+    "code": "AUS",
+    "group_name": "A",
+    "created_at": "2026-06-26T18:15:21"
   },
   {
-    "id": 26,
-    "name": "Suiza",
-    "code": "SUI",
-    "group_name": "H",
-    "created_at": "2026-06-26T18:04:05"
+    "id": 10,
+    "name": "Irak",
+    "code": "IRQ",
+    "group_name": "E",
+    "created_at": "2026-06-26T18:15:21"
   },
   {
-    "id": 27,
-    "name": "República Democrática del Congo",
-    "code": "COD",
-    "group_name": "G",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 28,
-    "name": "República Checa",
-    "code": "CZE",
-    "group_name": "G",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 29,
-    "name": "Ecuador",
-    "code": "ECU",
-    "group_name": "C",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 30,
-    "name": "Suecia",
-    "code": "SWE",
-    "group_name": "G",
-    "created_at": "2026-06-26T18:04:05"
-  },
-  {
-    "id": 31,
+    "id": 11,
     "name": "Turquía",
     "code": "TUR",
     "group_name": "H",
-    "created_at": "2026-06-26T18:04:05"
+    "created_at": "2026-06-26T18:15:21"
   },
   {
-    "id": 32,
+    "id": 12,
+    "name": "Arabia Saudita",
+    "code": "KSA",
+    "group_name": "A",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 13,
+    "name": "Irán",
+    "code": "IRN",
+    "group_name": "E",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 14,
+    "name": "Paraguay",
+    "code": "PAR",
+    "group_name": "G",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 15,
+    "name": "Portugal",
+    "code": "POR",
+    "group_name": "G",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 16,
+    "name": "Colombia",
+    "code": "COL",
+    "group_name": "C",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 17,
+    "name": "España",
+    "code": "ESP",
+    "group_name": "D",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 18,
+    "name": "Ghana",
+    "code": "GHA",
+    "group_name": "E",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 19,
+    "name": "Suiza",
+    "code": "SUI",
+    "group_name": "H",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 20,
+    "name": "Austria",
+    "code": "AUT",
+    "group_name": "B",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 21,
+    "name": "Canadá",
+    "code": "CAN",
+    "group_name": "B",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 22,
     "name": "Curazao",
     "code": "CUW",
     "group_name": "C",
-    "created_at": "2026-06-26T18:04:05"
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 23,
+    "name": "Jordania",
+    "code": "JOR",
+    "group_name": "F",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 24,
+    "name": "Francia",
+    "code": "FRA",
+    "group_name": "E",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 25,
+    "name": "Uruguay",
+    "code": "URU",
+    "group_name": "H",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 26,
+    "name": "Sudáfrica",
+    "code": "RSA",
+    "group_name": "G",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 27,
+    "name": "Ecuador",
+    "code": "ECU",
+    "group_name": "D",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 28,
+    "name": "Uzbekistán",
+    "code": "UZB",
+    "group_name": "H",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 29,
+    "name": "Bosnia y Herzegovina",
+    "code": "BIH",
+    "group_name": "B",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 30,
+    "name": "Corea del Sur",
+    "code": "KOR",
+    "group_name": "C",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 31,
+    "name": "Argelia",
+    "code": "ALG",
+    "group_name": "A",
+    "created_at": "2026-06-26T18:15:21"
+  },
+  {
+    "id": 32,
+    "name": "Escocia",
+    "code": "SCO",
+    "group_name": "D",
+    "created_at": "2026-06-26T18:15:21"
   }
 ]

@@ -107,7 +107,7 @@ def build_html(simulation, dashboard, teams, players):
                 html += f'''
                     <tr class="{cls_row}">
                       <td><span class="position-badge {pc}">{pos}</span></td>
-                      <td><span class="team-name">{s.get("team", "")}</span></td>
+                      <td><span class="team-name" title="{s.get('team', '')}">{s.get("team", "")}</span></td>
                       <td><strong>{s.get("pts", 0)}</strong></td>
                       <td>{s.get("gf", 0)}</td>
                       <td>{s.get("ga", 0)}</td>
@@ -310,7 +310,8 @@ def build_html(simulation, dashboard, teams, players):
       color: var(--cda-white);
       text-transform: uppercase;
     }}
-    .group-table {{ margin: 0; width: 100%; border-collapse: collapse; }}
+    .group-table {{ margin: 0; width: 100%; border-collapse: collapse; table-layout: fixed; }}
+    .group-table td:nth-child(2) {{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }}
     .group-table th {{
       border: none; color: var(--cda-text-light); font-weight: 600;
       font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;

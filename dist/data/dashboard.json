@@ -1,11 +1,11 @@
 {
-  "champion": "Egipto",
+  "champion": "Ghana",
   "top_scorer": {
-    "player_name": "Musa Al-Taamari",
-    "team_name": "Jordania",
-    "goals": 13
+    "player_name": "Ismaël Bennacer",
+    "team_name": "Argelia",
+    "goals": 14
   },
-  "avg_goals_per_match": 4.86,
-  "total_goals": 311,
+  "avg_goals_per_match": 5.39,
+  "total_goals": 345,
   "total_matches": 64
 }
