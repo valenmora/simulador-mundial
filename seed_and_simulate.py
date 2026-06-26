@@ -58,6 +58,27 @@ def copy_images():
         print(f"Images copied: {len(list(STATIC_IMAGES.iterdir()))}")
 
 
+FIFA_TO_ISO = {
+    "ALG": "dz", "ANG": "ao", "ARG": "ar", "AUS": "au", "AUT": "at",
+    "BEL": "be", "BIH": "ba", "BRA": "br", "CAN": "ca", "CPV": "cv",
+    "COL": "co", "CRO": "hr", "CUW": "cw", "CZE": "cz", "COD": "cd",
+    "ECU": "ec", "EGY": "eg", "ENG": "gb", "FRA": "fr", "GER": "de",
+    "GHA": "gh", "HAI": "ht", "IRN": "ir", "IRQ": "iq", "CIV": "ci",
+    "JPN": "jp", "JOR": "jo", "KSA": "sa", "KOR": "kr", "MAR": "ma",
+    "MEX": "mx", "NED": "nl", "NZL": "nz", "NOR": "no", "PAN": "pa",
+    "PAR": "py", "POR": "pt", "QAT": "qa", "RSA": "za", "SCO": "gb",
+    "SEN": "sn", "ESP": "es", "SWE": "se", "SUI": "ch", "TUN": "tn",
+    "TUR": "tr", "USA": "us", "URU": "uy", "UZB": "uz",
+}
+
+
+def flag_img(code, w=24, h=18):
+    iso = FIFA_TO_ISO.get(code, "").lower()
+    if not iso:
+        return ""
+    return f'<img class="flag-icon" src="https://flagcdn.com/{w}x{h}/{iso}.png" alt="{code}" width="{w}" height="{h}">'
+
+
 def build_html(simulation, dashboard, teams, players):
     champion = simulation.get("champion", "Desconocido")
     groups = simulation.get("groups", [])
@@ -87,6 +108,9 @@ def build_html(simulation, dashboard, teams, players):
     avg_goals = round(total_goals / total_matches, 2) if total_matches else 0
 
     team_codes = {t["name"]: t["code"] for t in teams}
+    team_flags = {name: flag_img(code) for name, code in team_codes.items()}
+    champion_flag = team_flags.get(champion, "")
+    champion_team_flag = team_flags.get(champion_team, "")
 
     def render_groups():
         html = '<div class="row g-3">'
@@ -110,7 +134,7 @@ def build_html(simulation, dashboard, teams, players):
                 html += f'''
                     <tr class="{cls_row}">
                       <td><span class="position-badge {pc}">{pos}</span></td>
-                      <td><span class="team-code">{team_codes.get(team_name, team_name)}</span></td>
+                      <td>{team_flags.get(team_name, "")}<span class="team-code">{team_codes.get(team_name, team_name)}</span></td>
                       <td><strong>{s.get("pts", 0)}</strong></td>
                       <td>{s.get("gf", 0)}</td>
                       <td>{s.get("ga", 0)}</td>
@@ -132,12 +156,14 @@ def build_html(simulation, dashboard, teams, players):
         winner = m.get("winner", "")
         winner_cls = "winner" if winner else ""
         card_cls = "knockout-card compact" if compact else "knockout-card"
+        home_flag = team_flags.get(home, "")
+        away_flag = team_flags.get(away, "")
         return f'''
             <div class="{card_cls} {winner_cls}">
               <div class="match-scores-row">
-                <div class="team-name left">{home}</div>
+                <div class="team-name left">{home_flag}{home}</div>
                 <div class="score-display">{hg} : {ag}</div>
-                <div class="team-name right">{away}</div>
+                <div class="team-name right">{away_flag}{away}</div>
               </div>
               <hr class="match-divider">
               <div class="classified-row">&#x1F3C6; CLASIFICA {winner}</div>
@@ -149,26 +175,29 @@ def build_html(simulation, dashboard, teams, players):
         hg = m.get("home_goals", 0)
         ag = m.get("away_goals", 0)
         winner = m.get("winner", "")
+        home_flag = team_flags.get(home, "")
+        away_flag = team_flags.get(away, "")
+        winner_flag = team_flags.get(winner, "")
         if role == "champion":
             return f'''
             <div class="final-card champion-card">
               <div class="match-scores-row">
-                <div class="team-name left">{home}</div>
+                <div class="team-name left">{home_flag}{home}</div>
                 <div class="score-display final-score">{hg} : {ag}</div>
-                <div class="team-name right">{away}</div>
+                <div class="team-name right">{away_flag}{away}</div>
               </div>
               <hr class="match-divider">
               <div class="champion-declaration">
                 <div class="champion-label">&#x1F3C6; CAMPEON DEL MUNDO</div>
-                <div class="champion-team-name">{winner}</div>
+                <div class="champion-team-name">{winner_flag}{winner}</div>
               </div>
             </div>'''
         return f'''
             <div class="final-card third-place-final-card">
               <div class="match-scores-row">
-                <div class="team-name left">{home}</div>
+                <div class="team-name left">{home_flag}{home}</div>
                 <div class="score-display third-score">{hg} : {ag}</div>
-                <div class="team-name right">{away}</div>
+                <div class="team-name right">{away_flag}{away}</div>
               </div>
               <hr class="match-divider">
               <div class="classified-row">&#x1F949; CLASIFICA {winner}</div>
@@ -540,6 +569,7 @@ def build_html(simulation, dashboard, teams, players):
     .footer-cda .footer-text {{
       color: rgba(255,255,255,0.5); font-size: 0.75rem;
     }}
+    .flag-icon {{ vertical-align: middle; margin-right: 4px; border-radius: 2px; }}
     .knockout-section {{ margin-top: 1.5rem; }}
     .third-place {{ opacity: 0.65; }}
     @media (max-width: 768px) {{
@@ -600,7 +630,7 @@ def build_html(simulation, dashboard, teams, players):
         <div class="stat-label">Partidos</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value">{champion}</div>
+        <div class="stat-value">{champion_flag}{champion}</div>
         <div class="stat-label">Campeon</div>
       </div>
     </div>
@@ -613,7 +643,7 @@ def build_html(simulation, dashboard, teams, players):
     <div id="bracketResult">{render_bracket()}</div>
 
     <div class="champion-banner">
-      <div class="champion-name">{champion}</div>
+      <div class="champion-name">{champion_flag}{champion}</div>
       <div class="champion-sub">Campeon del Mundo 2026</div>
     </div>
 
@@ -623,14 +653,14 @@ def build_html(simulation, dashboard, teams, players):
     <div class="dashboard-grid">
       <div class="kpi-card accent-gold">
         <div class="kpi-icon">🏆</div>
-        <div class="kpi-value">{champion}</div>
+        <div class="kpi-value">{champion_flag}{champion}</div>
         <div class="kpi-label">Campeon</div>
       </div>
       <div class="kpi-card accent-blue">
         <div class="kpi-icon">⚽</div>
         <div class="kpi-value">{champion_name}</div>
         <div class="kpi-label">Boton de Oro</div>
-        <div class="kpi-sub">{champion_team} &middot; {champion_goals} goles</div>
+        <div class="kpi-sub">{champion_team_flag}{champion_team} &middot; {champion_goals} goles</div>
       </div>
       <div class="kpi-card accent-green">
         <div class="kpi-icon">📊</div>
@@ -676,11 +706,13 @@ def render_teams(teams):
         for i, t in enumerate(gteams):
             cls_row = "qualified" if i < 2 else "eliminated"
             pc = "pos-1" if i == 0 else ("pos-2" if i == 1 else "pos-3")
+            tname = t.get("name", "")
+            tcode = t.get("code", "")
             html += f'''
                 <tr class="{cls_row}">
                   <td><span class="position-badge {pc}">{i + 1}</span></td>
-                  <td><span class="team-name">{t.get("name", "")}</span></td>
-                  <td>{t.get("code", "")}</td>
+                  <td><span class="team-name">{flag_img(tcode)} {tname}</span></td>
+                  <td>{tcode}</td>
                 </tr>'''
         html += '''
               </tbody>
@@ -693,7 +725,7 @@ def render_teams(teams):
 def render_squads(teams, players):
     if not teams or not players:
         return '<div class="alert alert-info">No hay datos de plantillas.</div>'
-    team_map = {t["id"]: t["name"] for t in teams}
+    team_map = {t["id"]: (t["name"], t["code"]) for t in teams}
     squad_groups = {}
     for p in players:
         tid = p["team_id"]
@@ -706,7 +738,7 @@ def render_squads(teams, players):
 
     html = '<div class="row g-3">'
     for tid in sorted(squad_groups):
-        tname = team_map.get(tid, f"Equipo {tid}")
+        tname, tcode = team_map.get(tid, (f"Equipo {tid}", ""))
         player_list = squad_groups[tid]
         rows = "".join(
             f'<tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">{p["name"]}</td><td style="padding:0.25rem 0.5rem;">{position_badge(p["position"])}</td></tr>'
@@ -715,7 +747,7 @@ def render_squads(teams, players):
         html += f'''
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">{tname}</div>
+            <div class="group-header" style="font-size:0.75rem;">{flag_img(tcode)} {tname}</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
               <tbody>{rows}</tbody>

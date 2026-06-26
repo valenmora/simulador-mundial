@@ -1,11 +1,11 @@
 {
-  "champion": "Argentina",
+  "champion": "Jordania",
   "top_scorer": {
-    "player_name": "Mehdi Taremi",
-    "team_name": "Irán",
-    "goals": 14
+    "player_name": "Musa Al-Taamari",
+    "team_name": "Jordania",
+    "goals": 17
   },
-  "avg_goals_per_match": 4.8,
-  "total_goals": 307,
+  "avg_goals_per_match": 5.34,
+  "total_goals": 342,
   "total_matches": 64
 }
