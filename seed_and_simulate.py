@@ -124,26 +124,23 @@ def build_html(simulation, dashboard, teams, players):
         html += "</div>"
         return html
 
-    def render_match_row(m):
+    def render_match_row(m, compact=False):
         home = m.get("home_team", "?")
         away = m.get("away_team", "?")
         hg = m.get("home_goals", 0)
         ag = m.get("away_goals", 0)
         winner = m.get("winner", "")
-        hw = "winner" if winner == home else ""
-        aw = "winner" if winner == away else ""
+        winner_cls = "winner" if winner else ""
+        card_cls = "knockout-card compact" if compact else "knockout-card"
         return f'''
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team {hw}">
-                  <span class="team-label">{home}</span>
-                  <span class="match-score">{hg}</span>
-                </div>
-                <div class="team {aw}">
-                  <span class="team-label">{away}</span>
-                  <span class="match-score">{ag}</span>
-                </div>
+            <div class="{card_cls} {winner_cls}">
+              <div class="match-scores-row">
+                <div class="team-name left">{home}</div>
+                <div class="score-display">{hg} : {ag}</div>
+                <div class="team-name right">{away}</div>
               </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA {winner}</div>
             </div>'''
 
     def render_bracket():
@@ -155,25 +152,25 @@ def build_html(simulation, dashboard, teams, players):
             html += f'''
             <div class="knockout-section {cls}">
               <div class="round-header">{label}</div>
-              <div class="row">'''
+              <div class="bracket-grid">'''
             for m in matches:
-                html += f'<div class="col-12 mb-2">{render_match_row(m)}</div>'
+                html += render_match_row(m)
             html += "</div></div>"
 
         if third_place:
             html += f'''
             <div class="knockout-section third-place">
-              <div class="round-header">Tercer Puesto</div>
-              <div class="row justify-content-center">
-                <div class="col-md-4">{render_match_row(third_place)}</div>
+              <div class="round-header" style="background:var(--cda-text-light);font-size:0.75rem;">Tercer Puesto</div>
+              <div class="bracket-grid third-place-grid">
+                {render_match_row(third_place, compact=True)}
               </div>
             </div>'''
 
         html += f'''
             <div class="knockout-section final-round">
               <div class="round-header">Final</div>
-              <div class="row justify-content-center">
-                <div class="col-md-5">{render_match_row(final)}</div>
+              <div class="bracket-grid final-grid">
+                {render_match_row(final)}
               </div>
             </div>'''
         return html
@@ -341,39 +338,61 @@ def build_html(simulation, dashboard, teams, players):
       padding: 0.5rem 0; margin-bottom: 0.75rem; border-radius: var(--cda-radius-sm);
       color: var(--cda-white);
     }}
-    .round-of-16 .round-header {{ background: var(--cda-primary); }}
-    .quarterfinals .round-header {{ background: var(--cda-secondary); }}
-    .semifinals .round-header {{ background: #1a7a4a; }}
-    .final-round .round-header {{ background: var(--cda-dark); font-size: 0.9rem; }}
-    .third-place .round-header {{ background: var(--cda-text-light); }}
-    .match-card {{
-      background: var(--cda-card-bg);
-      border: 1px solid var(--cda-border-light);
-      border-radius: var(--cda-radius);
-      padding: 0.55rem 0.85rem;
-      margin-bottom: 0.5rem;
-      box-shadow: var(--cda-shadow-sm);
+    .round-header {{
+      text-align: center; font-weight: 800; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 2.5px;
+      padding: 0.85rem 1.5rem; border-radius: 10px;
+      color: #fff; background: var(--cda-dark);
+      margin-bottom: 1.25rem;
     }}
-    .match-teams .team {{
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.15rem 0; font-size: 0.8rem;
+    .bracket-grid {{
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
     }}
-    .match-teams .team .team-label {{
-      font-weight: 500; color: var(--cda-text);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    .knockout-card {{
+      background: #fff; border-radius: 14px; padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,30,60,0.08);
+      transition: transform 200ms, box-shadow 200ms;
     }}
-    .match-teams .team.winner .team-label {{
-      font-weight: 700; color: var(--cda-primary);
+    .knockout-card:hover {{
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,30,60,0.12);
     }}
-    .match-score {{
-      font-family: "Poppins", sans-serif;
-      font-weight: 600; font-size: 0.95rem;
-      min-width: 34px; text-align: center;
-      background: var(--cda-light-bg);
-      padding: 0.1rem 0.3rem; border-radius: var(--cda-radius-sm);
+    .knockout-card.winner {{
+      border-left: 5px solid var(--cda-primary);
     }}
-    .match-teams .team.winner .match-score {{
-      background: rgba(0,86,167,0.1); color: var(--cda-primary);
+    .knockout-card.compact {{
+      padding: 16px 20px;
+    }}
+    .knockout-card.compact .score-display {{
+      font-size: 32px; min-width: 80px;
+    }}
+    .match-scores-row {{
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }}
+    .team-name {{
+      font-weight: 600; font-size: 1rem; flex: 1; word-break: break-word; line-height: 1.3;
+    }}
+    .team-name.left {{ text-align: left; }}
+    .team-name.right {{ text-align: right; }}
+    .score-display {{
+      font-family: "Poppins", sans-serif; font-size: 48px; font-weight: 700;
+      color: var(--cda-text); text-align: center; min-width: 120px; flex-shrink: 0;
+    }}
+    .match-divider {{
+      border: none; border-top: 1px solid var(--cda-border-light); margin: 16px 0 12px;
+    }}
+    .classified-row {{
+      text-align: center; color: var(--cda-primary); font-weight: 700;
+      font-size: 0.85rem; padding-top: 4px;
+    }}
+    @media (max-width: 991px) {{
+      .bracket-grid {{ grid-template-columns: 1fr; gap: 20px; }}
+      .score-display {{ font-size: 36px; min-width: 100px; }}
+    }}
+    @media (max-width: 575px) {{
+      .knockout-card {{ padding: 16px; }}
+      .score-display {{ font-size: 28px; min-width: 80px; }}
+      .match-divider {{ margin: 12px 0 8px; }}
     }}
     .champion-banner {{
       background: linear-gradient(135deg, var(--cda-primary) 0%, var(--cda-dark) 100%);

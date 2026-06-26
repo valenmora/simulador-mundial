@@ -161,39 +161,61 @@
       padding: 0.5rem 0; margin-bottom: 0.75rem; border-radius: var(--cda-radius-sm);
       color: var(--cda-white);
     }
-    .round-of-16 .round-header { background: var(--cda-primary); }
-    .quarterfinals .round-header { background: var(--cda-secondary); }
-    .semifinals .round-header { background: #1a7a4a; }
-    .final-round .round-header { background: var(--cda-dark); font-size: 0.9rem; }
-    .third-place .round-header { background: var(--cda-text-light); }
-    .match-card {
-      background: var(--cda-card-bg);
-      border: 1px solid var(--cda-border-light);
-      border-radius: var(--cda-radius);
-      padding: 0.55rem 0.85rem;
-      margin-bottom: 0.5rem;
-      box-shadow: var(--cda-shadow-sm);
+    .round-header {
+      text-align: center; font-weight: 800; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 2.5px;
+      padding: 0.85rem 1.5rem; border-radius: 10px;
+      color: #fff; background: var(--cda-dark);
+      margin-bottom: 1.25rem;
     }
-    .match-teams .team {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.15rem 0; font-size: 0.8rem;
+    .bracket-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
     }
-    .match-teams .team .team-label {
-      font-weight: 500; color: var(--cda-text);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    .knockout-card {
+      background: #fff; border-radius: 14px; padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,30,60,0.08);
+      transition: transform 200ms, box-shadow 200ms;
     }
-    .match-teams .team.winner .team-label {
-      font-weight: 700; color: var(--cda-primary);
+    .knockout-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,30,60,0.12);
     }
-    .match-score {
-      font-family: "Poppins", sans-serif;
-      font-weight: 600; font-size: 0.95rem;
-      min-width: 34px; text-align: center;
-      background: var(--cda-light-bg);
-      padding: 0.1rem 0.3rem; border-radius: var(--cda-radius-sm);
+    .knockout-card.winner {
+      border-left: 5px solid var(--cda-primary);
     }
-    .match-teams .team.winner .match-score {
-      background: rgba(0,86,167,0.1); color: var(--cda-primary);
+    .knockout-card.compact {
+      padding: 16px 20px;
+    }
+    .knockout-card.compact .score-display {
+      font-size: 32px; min-width: 80px;
+    }
+    .match-scores-row {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .team-name {
+      font-weight: 600; font-size: 1rem; flex: 1; word-break: break-word; line-height: 1.3;
+    }
+    .team-name.left { text-align: left; }
+    .team-name.right { text-align: right; }
+    .score-display {
+      font-family: "Poppins", sans-serif; font-size: 48px; font-weight: 700;
+      color: var(--cda-text); text-align: center; min-width: 120px; flex-shrink: 0;
+    }
+    .match-divider {
+      border: none; border-top: 1px solid var(--cda-border-light); margin: 16px 0 12px;
+    }
+    .classified-row {
+      text-align: center; color: var(--cda-primary); font-weight: 700;
+      font-size: 0.85rem; padding-top: 4px;
+    }
+    @media (max-width: 991px) {
+      .bracket-grid { grid-template-columns: 1fr; gap: 20px; }
+      .score-display { font-size: 36px; min-width: 100px; }
+    }
+    @media (max-width: 575px) {
+      .knockout-card { padding: 16px; }
+      .score-display { font-size: 28px; min-width: 80px; }
+      .match-divider { margin: 12px 0 8px; }
     }
     .champion-banner {
       background: linear-gradient(135deg, var(--cda-primary) 0%, var(--cda-dark) 100%);
@@ -293,23 +315,23 @@
               <tbody>
                 <tr class="qualified">
                   <td><span class="position-badge pos-1">1</span></td>
-                  <td><span class="team-name">Alemania</span></td>
-                  <td>GER</td>
+                  <td><span class="team-name">Argelia</span></td>
+                  <td>ALG</td>
                 </tr>
                 <tr class="qualified">
                   <td><span class="position-badge pos-2">2</span></td>
-                  <td><span class="team-name">Arabia Saudita</span></td>
-                  <td>KSA</td>
+                  <td><span class="team-name">Argentina</span></td>
+                  <td>ARG</td>
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">3</span></td>
-                  <td><span class="team-name">Austria</span></td>
-                  <td>AUT</td>
+                  <td><span class="team-name">Alemania</span></td>
+                  <td>GER</td>
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">4</span></td>
-                  <td><span class="team-name">Australia</span></td>
-                  <td>AUS</td>
+                  <td><span class="team-name">Austria</span></td>
+                  <td>AUT</td>
                 </tr>
               </tbody>
             </table>
@@ -323,8 +345,8 @@
               <tbody>
                 <tr class="qualified">
                   <td><span class="position-badge pos-1">1</span></td>
-                  <td><span class="team-name">Bosnia y Herzegovina</span></td>
-                  <td>BIH</td>
+                  <td><span class="team-name">Colombia</span></td>
+                  <td>COL</td>
                 </tr>
                 <tr class="qualified">
                   <td><span class="position-badge pos-2">2</span></td>
@@ -333,13 +355,13 @@
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">3</span></td>
-                  <td><span class="team-name">Bélgica</span></td>
-                  <td>BEL</td>
+                  <td><span class="team-name">Canadá</span></td>
+                  <td>CAN</td>
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">4</span></td>
-                  <td><span class="team-name">Cabo Verde</span></td>
-                  <td>CPV</td>
+                  <td><span class="team-name">Corea del Sur</span></td>
+                  <td>KOR</td>
                 </tr>
               </tbody>
             </table>
@@ -353,23 +375,23 @@
               <tbody>
                 <tr class="qualified">
                   <td><span class="position-badge pos-1">1</span></td>
-                  <td><span class="team-name">Colombia</span></td>
-                  <td>COL</td>
+                  <td><span class="team-name">Egipto</span></td>
+                  <td>EGY</td>
                 </tr>
                 <tr class="qualified">
                   <td><span class="position-badge pos-2">2</span></td>
-                  <td><span class="team-name">Corea del Sur</span></td>
-                  <td>KOR</td>
+                  <td><span class="team-name">Croacia</span></td>
+                  <td>CRO</td>
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">3</span></td>
-                  <td><span class="team-name">Canadá</span></td>
-                  <td>CAN</td>
+                  <td><span class="team-name">Ecuador</span></td>
+                  <td>ECU</td>
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">4</span></td>
-                  <td><span class="team-name">Costa de Marfil</span></td>
-                  <td>CIV</td>
+                  <td><span class="team-name">Escocia</span></td>
+                  <td>SCO</td>
                 </tr>
               </tbody>
             </table>
@@ -383,23 +405,23 @@
               <tbody>
                 <tr class="qualified">
                   <td><span class="position-badge pos-1">1</span></td>
-                  <td><span class="team-name">Ecuador</span></td>
-                  <td>ECU</td>
-                </tr>
-                <tr class="qualified">
-                  <td><span class="position-badge pos-2">2</span></td>
                   <td><span class="team-name">España</span></td>
                   <td>ESP</td>
                 </tr>
+                <tr class="qualified">
+                  <td><span class="position-badge pos-2">2</span></td>
+                  <td><span class="team-name">Francia</span></td>
+                  <td>FRA</td>
+                </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">3</span></td>
-                  <td><span class="team-name">Curazao</span></td>
-                  <td>CUW</td>
+                  <td><span class="team-name">Ghana</span></td>
+                  <td>GHA</td>
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">4</span></td>
-                  <td><span class="team-name">Egipto</span></td>
-                  <td>EGY</td>
+                  <td><span class="team-name">Inglaterra</span></td>
+                  <td>ENG</td>
                 </tr>
               </tbody>
             </table>
@@ -413,8 +435,8 @@
               <tbody>
                 <tr class="qualified">
                   <td><span class="position-badge pos-1">1</span></td>
-                  <td><span class="team-name">Francia</span></td>
-                  <td>FRA</td>
+                  <td><span class="team-name">Irán</span></td>
+                  <td>IRN</td>
                 </tr>
                 <tr class="qualified">
                   <td><span class="position-badge pos-2">2</span></td>
@@ -423,13 +445,13 @@
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">3</span></td>
-                  <td><span class="team-name">Haití</span></td>
-                  <td>HAI</td>
+                  <td><span class="team-name">Jordania</span></td>
+                  <td>JOR</td>
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">4</span></td>
-                  <td><span class="team-name">Inglaterra</span></td>
-                  <td>ENG</td>
+                  <td><span class="team-name">Marruecos</span></td>
+                  <td>MAR</td>
                 </tr>
               </tbody>
             </table>
@@ -443,13 +465,13 @@
               <tbody>
                 <tr class="qualified">
                   <td><span class="position-badge pos-1">1</span></td>
-                  <td><span class="team-name">Panamá</span></td>
-                  <td>PAN</td>
+                  <td><span class="team-name">México</span></td>
+                  <td>MEX</td>
                 </tr>
                 <tr class="qualified">
                   <td><span class="position-badge pos-2">2</span></td>
-                  <td><span class="team-name">Jordania</span></td>
-                  <td>JOR</td>
+                  <td><span class="team-name">Portugal</span></td>
+                  <td>POR</td>
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">3</span></td>
@@ -458,8 +480,8 @@
                 </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">4</span></td>
-                  <td><span class="team-name">Japón</span></td>
-                  <td>JPN</td>
+                  <td><span class="team-name">Noruega</span></td>
+                  <td>NOR</td>
                 </tr>
               </tbody>
             </table>
@@ -473,23 +495,23 @@
               <tbody>
                 <tr class="qualified">
                   <td><span class="position-badge pos-1">1</span></td>
-                  <td><span class="team-name">Paraguay</span></td>
-                  <td>PAR</td>
-                </tr>
-                <tr class="qualified">
-                  <td><span class="position-badge pos-2">2</span></td>
-                  <td><span class="team-name">Países Bajos</span></td>
-                  <td>NED</td>
-                </tr>
-                <tr class="eliminated">
-                  <td><span class="position-badge pos-3">3</span></td>
                   <td><span class="team-name">Senegal</span></td>
                   <td>SEN</td>
                 </tr>
+                <tr class="qualified">
+                  <td><span class="position-badge pos-2">2</span></td>
+                  <td><span class="team-name">República Checa</span></td>
+                  <td>CZE</td>
+                </tr>
+                <tr class="eliminated">
+                  <td><span class="position-badge pos-3">3</span></td>
+                  <td><span class="team-name">República Democrática del Congo</span></td>
+                  <td>COD</td>
+                </tr>
                 <tr class="eliminated">
                   <td><span class="position-badge pos-3">4</span></td>
-                  <td><span class="team-name">Portugal</span></td>
-                  <td>POR</td>
+                  <td><span class="team-name">Qatar</span></td>
+                  <td>QAT</td>
                 </tr>
               </tbody>
             </table>
@@ -503,23 +525,23 @@
               <tbody>
                 <tr class="qualified">
                   <td><span class="position-badge pos-1">1</span></td>
-                  <td><span class="team-name">Uruguay</span></td>
-                  <td>URU</td>
+                  <td><span class="team-name">Suiza</span></td>
+                  <td>SUI</td>
                 </tr>
                 <tr class="qualified">
                   <td><span class="position-badge pos-2">2</span></td>
+                  <td><span class="team-name">Turquía</span></td>
+                  <td>TUR</td>
+                </tr>
+                <tr class="eliminated">
+                  <td><span class="position-badge pos-3">3</span></td>
                   <td><span class="team-name">Suecia</span></td>
                   <td>SWE</td>
                 </tr>
                 <tr class="eliminated">
-                  <td><span class="position-badge pos-3">3</span></td>
+                  <td><span class="position-badge pos-3">4</span></td>
                   <td><span class="team-name">Uzbekistán</span></td>
                   <td>UZB</td>
-                </tr>
-                <tr class="eliminated">
-                  <td><span class="position-badge pos-3">4</span></td>
-                  <td><span class="team-name">Turquía</span></td>
-                  <td>TUR</td>
                 </tr>
               </tbody>
             </table>
@@ -534,19 +556,37 @@
       <div id="squadsContainer"><div class="row g-3">
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Panamá</div>
+            <div class="group-header" style="font-size:0.75rem;">España</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Adalberto Carrasquilla</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">José Fajardo</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Lamine Yamal</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Pedri</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
             </table>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Bosnia y Herzegovina</div>
+            <div class="group-header" style="font-size:0.75rem;">Egipto</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Edin Džeko</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Ermedin Demirović</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Mohamed Salah</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Omar Marmoush</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Suiza</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Granit Xhaka</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Manuel Akanji</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Irán</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Mehdi Taremi</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Sardar Azmoun</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
             </table>
           </div>
         </div>
@@ -556,6 +596,132 @@
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
               <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Luis Díaz</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">James Rodríguez</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Irak</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Aymen Hussein</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Ibrahim Bayesh</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Turquía</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Arda Güler</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Hakan Çalhanoğlu</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Argelia</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Riyad Mahrez</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Ismaël Bennacer</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">México</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Santiago Giménez</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Edson Álvarez</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Portugal</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Cristiano Ronaldo</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Bruno Fernandes</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Senegal</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Sadio Mané</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Kalidou Koulibaly</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Brasil</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Vinícius Júnior</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Rodrygo</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Argentina</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Lionel Messi</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Julián Álvarez</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Nueva Zelanda</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Chris Wood</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Liberato Cacace</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Canadá</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Alphonso Davies</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Jonathan David</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Croacia</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Luka Modrić</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Joško Gvardiol</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">República Checa</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Tomáš Souček</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Patrik Schick</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">República Democrática del Congo</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Chancel Mbemba</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Yoane Wissa</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Noruega</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Erling Haaland</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Martin Ødegaard</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
             </table>
           </div>
         </div>
@@ -579,60 +745,6 @@
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Irak</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Aymen Hussein</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Ibrahim Bayesh</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">España</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Lamine Yamal</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Pedri</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Uruguay</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Federico Valverde</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Darwin Núñez</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Paraguay</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Miguel Almirón</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Julio Enciso</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Corea del Sur</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Son Heung-min</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Lee Kang-in</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Haití</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Duckens Nazon</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Danley Jean Jacques</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
             <div class="group-header" style="font-size:0.75rem;">Alemania</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
@@ -642,136 +754,10 @@
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Jordania</div>
+            <div class="group-header" style="font-size:0.75rem;">Qatar</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Musa Al-Taamari</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Yazan Al-Naimat</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Países Bajos</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Virgil van Dijk</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Cody Gakpo</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Curazao</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Leandro Bacuna</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Eloy Room</td><td style="padding:0.25rem 0.5rem;"><span style="background:#dc3545;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">GK</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Arabia Saudita</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Salem Al-Dawsari</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Firas Al-Buraikan</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Senegal</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Sadio Mané</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Kalidou Koulibaly</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Egipto</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Mohamed Salah</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Omar Marmoush</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Brasil</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Vinícius Júnior</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Rodrygo</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Canadá</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Alphonso Davies</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Jonathan David</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Bélgica</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Kevin De Bruyne</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Jérémy Doku</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Suecia</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Alexander Isak</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Anthony Elanga</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Cabo Verde</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Ryan Mendes</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Jamiro Monteiro</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Portugal</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Cristiano Ronaldo</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Bruno Fernandes</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Uzbekistán</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Abdukodir Khusanov</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Eldor Shomurodov</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Turquía</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Arda Güler</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Hakan Çalhanoğlu</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Inglaterra</div>
-            <table class="group-table">
-              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Harry Kane</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Jude Bellingham</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Akram Afif</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Almoez Ali</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
             </table>
           </div>
         </div>
@@ -786,37 +772,73 @@
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Nueva Zelanda</div>
+            <div class="group-header" style="font-size:0.75rem;">Corea del Sur</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Chris Wood</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Liberato Cacace</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr></tbody>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Son Heung-min</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Lee Kang-in</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
             </table>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Japón</div>
+            <div class="group-header" style="font-size:0.75rem;">Jordania</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Takefusa Kubo</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Kaoru Mitoma</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Musa Al-Taamari</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Yazan Al-Naimat</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
             </table>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Australia</div>
+            <div class="group-header" style="font-size:0.75rem;">Suecia</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Mathew Ryan</td><td style="padding:0.25rem 0.5rem;"><span style="background:#dc3545;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">GK</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Jackson Irvine</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Alexander Isak</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Anthony Elanga</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
             </table>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="group-card">
-            <div class="group-header" style="font-size:0.75rem;">Costa de Marfil</div>
+            <div class="group-header" style="font-size:0.75rem;">Marruecos</div>
             <table class="group-table">
               <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
-              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Sébastien Haller</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Simon Adingra</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Achraf Hakimi</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Youssef En-Nesyri</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Ghana</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Mohammed Kudus</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Thomas Partey</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Inglaterra</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Harry Kane</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Jude Bellingham</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Escocia</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Andrew Robertson</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Scott McTominay</td><td style="padding:0.25rem 0.5rem;"><span style="background:#198754;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">MF</span></td></tr></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="group-card">
+            <div class="group-header" style="font-size:0.75rem;">Uzbekistán</div>
+            <table class="group-table">
+              <thead><tr><th>Jugador</th><th>Pos.</th></tr></thead>
+              <tbody><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Abdukodir Khusanov</td><td style="padding:0.25rem 0.5rem;"><span style="background:#0d6efd;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">DF</span></td></tr><tr><td style="padding:0.25rem 0.5rem;font-size:0.8rem;">Eldor Shomurodov</td><td style="padding:0.25rem 0.5rem;"><span style="background:#ffc107;color:#000;font-size:0.65rem;padding:0.1rem 0.45rem;border-radius:3px;font-weight:600;">FW</span></td></tr></tbody>
             </table>
           </div>
         </div></div></div>
@@ -832,7 +854,7 @@
         <div class="stat-label">Equipos</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value">337</div>
+        <div class="stat-value">357</div>
         <div class="stat-label">Goles Totales</div>
       </div>
       <div class="stat-item">
@@ -840,7 +862,7 @@
         <div class="stat-label">Partidos</div>
       </div>
       <div class="stat-item">
-        <div class="stat-value">Turquía</div>
+        <div class="stat-value">República Checa</div>
         <div class="stat-label">Campeon</div>
       </div>
     </div>
@@ -855,35 +877,35 @@
                   <tbody>
                     <tr class="qualified">
                       <td><span class="position-badge pos-1">1</span></td>
-                      <td><span class="team-code">AUS</span></td>
-                      <td><strong>9</strong></td>
-                      <td>15</td>
-                      <td>9</td>
-                      <td>+6</td>
+                      <td><span class="team-code">AUT</span></td>
+                      <td><strong>6</strong></td>
+                      <td>7</td>
+                      <td>2</td>
+                      <td>+5</td>
                     </tr>
                     <tr class="qualified">
                       <td><span class="position-badge pos-2">2</span></td>
-                      <td><span class="team-code">GER</span></td>
+                      <td><span class="team-code">ARG</span></td>
                       <td><strong>4</strong></td>
                       <td>8</td>
-                      <td>7</td>
-                      <td>+1</td>
+                      <td>8</td>
+                      <td>+0</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">3</span></td>
-                      <td><span class="team-code">AUT</span></td>
-                      <td><strong>2</strong></td>
-                      <td>6</td>
+                      <td><span class="team-code">ALG</span></td>
+                      <td><strong>4</strong></td>
                       <td>7</td>
-                      <td>-1</td>
+                      <td>7</td>
+                      <td>+0</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">4</span></td>
-                      <td><span class="team-code">KSA</span></td>
-                      <td><strong>1</strong></td>
+                      <td><span class="team-code">GER</span></td>
+                      <td><strong>3</strong></td>
                       <td>6</td>
-                      <td>12</td>
-                      <td>-6</td>
+                      <td>11</td>
+                      <td>-5</td>
                     </tr>
                   </tbody>
                 </table>
@@ -897,35 +919,35 @@
                   <tbody>
                     <tr class="qualified">
                       <td><span class="position-badge pos-1">1</span></td>
-                      <td><span class="team-code">BIH</span></td>
-                      <td><strong>9</strong></td>
-                      <td>13</td>
-                      <td>5</td>
-                      <td>+8</td>
+                      <td><span class="team-code">CAN</span></td>
+                      <td><strong>6</strong></td>
+                      <td>12</td>
+                      <td>9</td>
+                      <td>+3</td>
                     </tr>
                     <tr class="qualified">
                       <td><span class="position-badge pos-2">2</span></td>
-                      <td><span class="team-code">CPV</span></td>
-                      <td><strong>4</strong></td>
-                      <td>11</td>
-                      <td>13</td>
+                      <td><span class="team-code">COL</span></td>
+                      <td><strong>6</strong></td>
+                      <td>6</td>
+                      <td>8</td>
                       <td>-2</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">3</span></td>
-                      <td><span class="team-code">BEL</span></td>
+                      <td><span class="team-code">KOR</span></td>
                       <td><strong>4</strong></td>
-                      <td>9</td>
-                      <td>11</td>
-                      <td>-2</td>
+                      <td>10</td>
+                      <td>6</td>
+                      <td>+4</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">4</span></td>
                       <td><span class="team-code">BRA</span></td>
-                      <td><strong>0</strong></td>
-                      <td>11</td>
-                      <td>15</td>
-                      <td>-4</td>
+                      <td><strong>1</strong></td>
+                      <td>1</td>
+                      <td>6</td>
+                      <td>-5</td>
                     </tr>
                   </tbody>
                 </table>
@@ -939,35 +961,35 @@
                   <tbody>
                     <tr class="qualified">
                       <td><span class="position-badge pos-1">1</span></td>
-                      <td><span class="team-code">KOR</span></td>
-                      <td><strong>6</strong></td>
-                      <td>12</td>
-                      <td>6</td>
-                      <td>+6</td>
+                      <td><span class="team-code">ECU</span></td>
+                      <td><strong>7</strong></td>
+                      <td>8</td>
+                      <td>3</td>
+                      <td>+5</td>
                     </tr>
                     <tr class="qualified">
                       <td><span class="position-badge pos-2">2</span></td>
-                      <td><span class="team-code">COL</span></td>
+                      <td><span class="team-code">EGY</span></td>
                       <td><strong>6</strong></td>
-                      <td>12</td>
-                      <td>7</td>
-                      <td>+5</td>
+                      <td>11</td>
+                      <td>9</td>
+                      <td>+2</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">3</span></td>
-                      <td><span class="team-code">CAN</span></td>
-                      <td><strong>6</strong></td>
-                      <td>7</td>
-                      <td>8</td>
-                      <td>-1</td>
+                      <td><span class="team-code">CRO</span></td>
+                      <td><strong>2</strong></td>
+                      <td>9</td>
+                      <td>11</td>
+                      <td>-2</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">4</span></td>
-                      <td><span class="team-code">CIV</span></td>
-                      <td><strong>0</strong></td>
-                      <td>4</td>
-                      <td>14</td>
-                      <td>-10</td>
+                      <td><span class="team-code">SCO</span></td>
+                      <td><strong>1</strong></td>
+                      <td>6</td>
+                      <td>11</td>
+                      <td>-5</td>
                     </tr>
                   </tbody>
                 </table>
@@ -981,35 +1003,35 @@
                   <tbody>
                     <tr class="qualified">
                       <td><span class="position-badge pos-1">1</span></td>
-                      <td><span class="team-code">ECU</span></td>
-                      <td><strong>7</strong></td>
-                      <td>9</td>
-                      <td>7</td>
-                      <td>+2</td>
+                      <td><span class="team-code">ENG</span></td>
+                      <td><strong>9</strong></td>
+                      <td>8</td>
+                      <td>1</td>
+                      <td>+7</td>
                     </tr>
                     <tr class="qualified">
                       <td><span class="position-badge pos-2">2</span></td>
-                      <td><span class="team-code">CUW</span></td>
-                      <td><strong>6</strong></td>
-                      <td>13</td>
-                      <td>10</td>
+                      <td><span class="team-code">GHA</span></td>
+                      <td><strong>4</strong></td>
+                      <td>6</td>
+                      <td>3</td>
                       <td>+3</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">3</span></td>
-                      <td><span class="team-code">ESP</span></td>
-                      <td><strong>3</strong></td>
+                      <td><span class="team-code">FRA</span></td>
+                      <td><strong>4</strong></td>
                       <td>6</td>
-                      <td>8</td>
-                      <td>-2</td>
+                      <td>6</td>
+                      <td>+0</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">4</span></td>
-                      <td><span class="team-code">EGY</span></td>
-                      <td><strong>1</strong></td>
-                      <td>10</td>
-                      <td>13</td>
-                      <td>-3</td>
+                      <td><span class="team-code">ESP</span></td>
+                      <td><strong>0</strong></td>
+                      <td>1</td>
+                      <td>11</td>
+                      <td>-10</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1023,7 +1045,7 @@
                   <tbody>
                     <tr class="qualified">
                       <td><span class="position-badge pos-1">1</span></td>
-                      <td><span class="team-code">FRA</span></td>
+                      <td><span class="team-code">JOR</span></td>
                       <td><strong>6</strong></td>
                       <td>12</td>
                       <td>8</td>
@@ -1032,26 +1054,26 @@
                     <tr class="qualified">
                       <td><span class="position-badge pos-2">2</span></td>
                       <td><span class="team-code">IRQ</span></td>
-                      <td><strong>6</strong></td>
-                      <td>9</td>
-                      <td>6</td>
-                      <td>+3</td>
+                      <td><strong>4</strong></td>
+                      <td>13</td>
+                      <td>12</td>
+                      <td>+1</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">3</span></td>
-                      <td><span class="team-code">ENG</span></td>
+                      <td><span class="team-code">IRN</span></td>
                       <td><strong>4</strong></td>
-                      <td>2</td>
-                      <td>3</td>
+                      <td>8</td>
+                      <td>9</td>
                       <td>-1</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">4</span></td>
-                      <td><span class="team-code">HAI</span></td>
-                      <td><strong>1</strong></td>
-                      <td>3</td>
+                      <td><span class="team-code">MAR</span></td>
+                      <td><strong>2</strong></td>
+                      <td>5</td>
                       <td>9</td>
-                      <td>-6</td>
+                      <td>-4</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1065,35 +1087,35 @@
                   <tbody>
                     <tr class="qualified">
                       <td><span class="position-badge pos-1">1</span></td>
-                      <td><span class="team-code">JPN</span></td>
-                      <td><strong>5</strong></td>
-                      <td>4</td>
-                      <td>2</td>
-                      <td>+2</td>
+                      <td><span class="team-code">NZL</span></td>
+                      <td><strong>7</strong></td>
+                      <td>15</td>
+                      <td>9</td>
+                      <td>+6</td>
                     </tr>
                     <tr class="qualified">
                       <td><span class="position-badge pos-2">2</span></td>
-                      <td><span class="team-code">JOR</span></td>
+                      <td><span class="team-code">POR</span></td>
                       <td><strong>4</strong></td>
-                      <td>8</td>
-                      <td>8</td>
-                      <td>+0</td>
+                      <td>11</td>
+                      <td>12</td>
+                      <td>-1</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">3</span></td>
-                      <td><span class="team-code">NZL</span></td>
+                      <td><span class="team-code">NOR</span></td>
                       <td><strong>4</strong></td>
-                      <td>4</td>
-                      <td>7</td>
-                      <td>-3</td>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>-1</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">4</span></td>
-                      <td><span class="team-code">PAN</span></td>
-                      <td><strong>3</strong></td>
-                      <td>8</td>
-                      <td>7</td>
-                      <td>+1</td>
+                      <td><span class="team-code">MEX</span></td>
+                      <td><strong>1</strong></td>
+                      <td>10</td>
+                      <td>14</td>
+                      <td>-4</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1107,35 +1129,35 @@
                   <tbody>
                     <tr class="qualified">
                       <td><span class="position-badge pos-1">1</span></td>
-                      <td><span class="team-code">POR</span></td>
-                      <td><strong>6</strong></td>
-                      <td>10</td>
-                      <td>6</td>
-                      <td>+4</td>
+                      <td><span class="team-code">SEN</span></td>
+                      <td><strong>9</strong></td>
+                      <td>14</td>
+                      <td>8</td>
+                      <td>+6</td>
                     </tr>
                     <tr class="qualified">
                       <td><span class="position-badge pos-2">2</span></td>
-                      <td><span class="team-code">SEN</span></td>
-                      <td><strong>6</strong></td>
-                      <td>8</td>
-                      <td>5</td>
+                      <td><span class="team-code">CZE</span></td>
+                      <td><strong>4</strong></td>
+                      <td>9</td>
+                      <td>6</td>
                       <td>+3</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">3</span></td>
-                      <td><span class="team-code">NED</span></td>
-                      <td><strong>3</strong></td>
+                      <td><span class="team-code">COD</span></td>
+                      <td><strong>4</strong></td>
                       <td>5</td>
-                      <td>7</td>
-                      <td>-2</td>
+                      <td>6</td>
+                      <td>-1</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">4</span></td>
-                      <td><span class="team-code">PAR</span></td>
-                      <td><strong>3</strong></td>
-                      <td>4</td>
-                      <td>9</td>
-                      <td>-5</td>
+                      <td><span class="team-code">QAT</span></td>
+                      <td><strong>0</strong></td>
+                      <td>3</td>
+                      <td>11</td>
+                      <td>-8</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1149,35 +1171,35 @@
                   <tbody>
                     <tr class="qualified">
                       <td><span class="position-badge pos-1">1</span></td>
-                      <td><span class="team-code">SWE</span></td>
+                      <td><span class="team-code">TUR</span></td>
                       <td><strong>9</strong></td>
-                      <td>7</td>
-                      <td>0</td>
+                      <td>12</td>
+                      <td>5</td>
                       <td>+7</td>
                     </tr>
                     <tr class="qualified">
                       <td><span class="position-badge pos-2">2</span></td>
-                      <td><span class="team-code">TUR</span></td>
-                      <td><strong>6</strong></td>
+                      <td><span class="team-code">UZB</span></td>
+                      <td><strong>4</strong></td>
                       <td>10</td>
-                      <td>8</td>
-                      <td>+2</td>
+                      <td>11</td>
+                      <td>-1</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">3</span></td>
-                      <td><span class="team-code">URU</span></td>
-                      <td><strong>3</strong></td>
-                      <td>5</td>
-                      <td>6</td>
+                      <td><span class="team-code">SWE</span></td>
+                      <td><strong>4</strong></td>
+                      <td>7</td>
+                      <td>8</td>
                       <td>-1</td>
                     </tr>
                     <tr class="eliminated">
                       <td><span class="position-badge pos-3">4</span></td>
-                      <td><span class="team-code">UZB</span></td>
+                      <td><span class="team-code">SUI</span></td>
                       <td><strong>0</strong></td>
-                      <td>2</td>
-                      <td>10</td>
-                      <td>-8</td>
+                      <td>6</td>
+                      <td>11</td>
+                      <td>-5</td>
                     </tr>
                   </tbody>
                 </table>
@@ -1189,220 +1211,172 @@
     <div id="bracketResult">
             <div class="knockout-section round-of-16">
               <div class="round-header">Octavos de Final</div>
-              <div class="row"><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Australia</span>
-                  <span class="match-score">3</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Cabo Verde</span>
-                  <span class="match-score">2</span>
-                </div>
+              <div class="bracket-grid">
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Austria</div>
+                <div class="score-display">5 : 5</div>
+                <div class="team-name right">Colombia</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Corea del Sur</span>
-                  <span class="match-score">4</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Curazao</span>
-                  <span class="match-score">1</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Colombia</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Ecuador</div>
+                <div class="score-display">3 : 5</div>
+                <div class="team-name right">Ghana</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team ">
-                  <span class="team-label">Francia</span>
-                  <span class="match-score">1</span>
-                </div>
-                <div class="team winner">
-                  <span class="team-label">Jordania</span>
-                  <span class="match-score">2</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Ghana</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Jordania</div>
+                <div class="score-display">3 : 5</div>
+                <div class="team-name right">Portugal</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team ">
-                  <span class="team-label">Portugal</span>
-                  <span class="match-score">3</span>
-                </div>
-                <div class="team winner">
-                  <span class="team-label">Turquía</span>
-                  <span class="match-score">4</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Portugal</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Senegal</div>
+                <div class="score-display">2 : 3</div>
+                <div class="team-name right">Uzbekistán</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Bosnia y Herzegovina</span>
-                  <span class="match-score">5</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Alemania</span>
-                  <span class="match-score">0</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Uzbekistán</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Canadá</div>
+                <div class="score-display">4 : 1</div>
+                <div class="team-name right">Argentina</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team ">
-                  <span class="team-label">Ecuador</span>
-                  <span class="match-score">2</span>
-                </div>
-                <div class="team winner">
-                  <span class="team-label">Colombia</span>
-                  <span class="match-score">4</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Canadá</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Inglaterra</div>
+                <div class="score-display">1 : 1</div>
+                <div class="team-name right">Egipto</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Japón</span>
-                  <span class="match-score">3</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Irak</span>
-                  <span class="match-score">0</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Egipto</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Nueva Zelanda</div>
+                <div class="score-display">5 : 5</div>
+                <div class="team-name right">Irak</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Suecia</span>
-                  <span class="match-score">4</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Senegal</span>
-                  <span class="match-score">1</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Irak</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Turquía</div>
+                <div class="score-display">5 : 5</div>
+                <div class="team-name right">República Checa</div>
               </div>
-            </div></div></div></div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA República Checa</div>
+            </div></div></div>
             <div class="knockout-section quarterfinals">
               <div class="round-header">Cuartos de Final</div>
-              <div class="row"><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team ">
-                  <span class="team-label">Australia</span>
-                  <span class="match-score">4</span>
-                </div>
-                <div class="team winner">
-                  <span class="team-label">Corea del Sur</span>
-                  <span class="match-score">4</span>
-                </div>
+              <div class="bracket-grid">
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Colombia</div>
+                <div class="score-display">1 : 3</div>
+                <div class="team-name right">Ghana</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team ">
-                  <span class="team-label">Jordania</span>
-                  <span class="match-score">0</span>
-                </div>
-                <div class="team winner">
-                  <span class="team-label">Turquía</span>
-                  <span class="match-score">1</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Ghana</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Portugal</div>
+                <div class="score-display">4 : 1</div>
+                <div class="team-name right">Uzbekistán</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Bosnia y Herzegovina</span>
-                  <span class="match-score">5</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Colombia</span>
-                  <span class="match-score">1</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Portugal</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Canadá</div>
+                <div class="score-display">3 : 1</div>
+                <div class="team-name right">Egipto</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Japón</span>
-                  <span class="match-score">3</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Suecia</span>
-                  <span class="match-score">2</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Canadá</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Irak</div>
+                <div class="score-display">0 : 5</div>
+                <div class="team-name right">República Checa</div>
               </div>
-            </div></div></div></div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA República Checa</div>
+            </div></div></div>
             <div class="knockout-section semifinals">
               <div class="round-header">Semifinales</div>
-              <div class="row"><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team ">
-                  <span class="team-label">Corea del Sur</span>
-                  <span class="match-score">3</span>
-                </div>
-                <div class="team winner">
-                  <span class="team-label">Turquía</span>
-                  <span class="match-score">5</span>
-                </div>
+              <div class="bracket-grid">
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Ghana</div>
+                <div class="score-display">1 : 3</div>
+                <div class="team-name right">Portugal</div>
               </div>
-            </div></div><div class="col-12 mb-2">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Bosnia y Herzegovina</span>
-                  <span class="match-score">3</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Japón</span>
-                  <span class="match-score">1</span>
-                </div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Portugal</div>
+            </div>
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Canadá</div>
+                <div class="score-display">4 : 5</div>
+                <div class="team-name right">República Checa</div>
               </div>
-            </div></div></div></div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA República Checa</div>
+            </div></div></div>
             <div class="knockout-section third-place">
-              <div class="round-header">Tercer Puesto</div>
-              <div class="row justify-content-center">
-                <div class="col-md-4">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team ">
-                  <span class="team-label">Corea del Sur</span>
-                  <span class="match-score">0</span>
-                </div>
-                <div class="team winner">
-                  <span class="team-label">Japón</span>
-                  <span class="match-score">3</span>
-                </div>
+              <div class="round-header" style="background:var(--cda-text-light);font-size:0.75rem;">Tercer Puesto</div>
+              <div class="bracket-grid third-place-grid">
+                
+            <div class="knockout-card compact winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Ghana</div>
+                <div class="score-display">1 : 1</div>
+                <div class="team-name right">Canadá</div>
               </div>
-            </div></div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA Ghana</div>
+            </div>
               </div>
             </div>
             <div class="knockout-section final-round">
               <div class="round-header">Final</div>
-              <div class="row justify-content-center">
-                <div class="col-md-5">
-            <div class="match-card">
-              <div class="match-teams">
-                <div class="team winner">
-                  <span class="team-label">Turquía</span>
-                  <span class="match-score">5</span>
-                </div>
-                <div class="team ">
-                  <span class="team-label">Bosnia y Herzegovina</span>
-                  <span class="match-score">5</span>
-                </div>
+              <div class="bracket-grid final-grid">
+                
+            <div class="knockout-card winner">
+              <div class="match-scores-row">
+                <div class="team-name left">Portugal</div>
+                <div class="score-display">1 : 4</div>
+                <div class="team-name right">República Checa</div>
               </div>
-            </div></div>
+              <hr class="match-divider">
+              <div class="classified-row">&#x1F3C6; CLASIFICA República Checa</div>
+            </div>
               </div>
             </div></div>
 
     <div class="champion-banner">
-      <div class="champion-name">Turquía</div>
+      <div class="champion-name">República Checa</div>
       <div class="champion-sub">Campeon del Mundo 2026</div>
     </div>
 
@@ -1412,23 +1386,23 @@
     <div class="dashboard-grid">
       <div class="kpi-card accent-gold">
         <div class="kpi-icon">🏆</div>
-        <div class="kpi-value">Turquía</div>
+        <div class="kpi-value">República Checa</div>
         <div class="kpi-label">Campeon</div>
       </div>
       <div class="kpi-card accent-blue">
         <div class="kpi-icon">⚽</div>
-        <div class="kpi-value">Edin Džeko</div>
+        <div class="kpi-value">Alphonso Davies</div>
         <div class="kpi-label">Boton de Oro</div>
-        <div class="kpi-sub">Bosnia y Herzegovina &middot; 17 goles</div>
+        <div class="kpi-sub">Canadá &middot; 16 goles</div>
       </div>
       <div class="kpi-card accent-green">
         <div class="kpi-icon">📊</div>
-        <div class="kpi-value">5.27</div>
+        <div class="kpi-value">5.58</div>
         <div class="kpi-label">Prom. Goles/Partido</div>
       </div>
       <div class="kpi-card accent-secondary">
         <div class="kpi-icon">🥅</div>
-        <div class="kpi-value">337</div>
+        <div class="kpi-value">357</div>
         <div class="kpi-label">Goles Totales</div>
         <div class="kpi-sub">en 64 partidos</div>
       </div>
